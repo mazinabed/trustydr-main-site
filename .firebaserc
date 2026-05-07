@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "doctorapp-7e8b3"
+  },
+  "targets": {
+    "doctorapp-7e8b3": {
+      "hosting": {
+        "main": [
+          "trustydr-main"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
