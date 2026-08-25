@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>منصة رعاية صحية آمنة</span>
+          <span>منظومة الرعاية الصحية والتجارة</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="فتح القائمة" data-label-open="فتح القائمة" data-label-close="إغلاق القائمة">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ar/">الرئيسية</a>
 <a data-nav href="/ar/how-it-works/">كيف يعمل</a>
 <a data-nav href="/ar/for-patients/">للمرضى</a>
-<a data-nav href="/ar/for-doctors/">للأطباء</a>
+<a data-nav href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+<a data-nav href="/ar/for-commerce/">Commerce</a>
 <a data-nav href="/ar/faq/">الأسئلة الشائعة</a>
 <a data-nav href="/ar/contact/">تواصل معنا</a>
 <a data-nav href="/ar/support/">الدعم</a>
@@ -43,14 +51,13 @@
           <a href="#" data-lang="ku">کوردی</a>
         </div>
 
-        <a class="btn primary" href="#download">تحميل التطبيق</a>
+        <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">بوابة المريض</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">الإدارة</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
     <div class="breadcrumb">TrustyDr / سياسة الخصوصية</div>
     <h1>سياسة الخصوصية</h1>
@@ -60,16 +67,44 @@
 <section class="content">
   <div class="container">
     <div class="prose"><p><b>تاريخ السريان:</b> 17 يناير 2026</p>
-<p>توضح سياسة الخصوصية هذه كيفية جمع TrustyDr للمعلومات واستخدامها ومشاركتها وحمايتها عند استخدامك للموقع والتطبيق والخدمات المرتبطة.</p>
-<h2>التواصل</h2>
-<p>للاستفسارات المتعلقة بالخصوصية أو حذف البيانات: <a href="mailto:support@trustydr.com">support@trustydr.com</a>.</p>
-<h2>ما الذي نجمعه</h2>
+<p>توضح سياسة الخصوصية هذه كيف يقوم TrustyDr ("نحن") بجمع المعلومات واستخدامها ومشاركتها وحمايتها عبر منظومة TrustyDr المتصلة من المنصات — حاليًا TrustyDr للمرضى، وTrustyDr لمقدمي الرعاية الصحية، وTrustyDr Commerce (يُشار إليها معًا بـ"الخدمات").</p>
+
+<h2>1. التواصل</h2>
+<p>للأسئلة أو الطلبات المتعلقة بالخصوصية، تواصل معنا عبر <a href="mailto:support@trustydr.com">support@trustydr.com</a>.</p>
+
+<h2>2. المعلومات التي نجمعها</h2>
 <ul>
-  <li>بيانات الحساب والملف الشخصي وطلبات المواعيد والرسائل المرسلة للدعم.</li>
-  <li>بيانات الاستخدام والأداء لتحسين الأمان والاستقرار.</li>
+  <li><b>معلومات تقدمها أنت:</b> بيانات الحساب والملف الشخصي وطلبات المواعيد وطلبات السوق والرسائل الموجهة للدعم.</li>
+  <li><b>معلومات تُجمع تلقائيًا:</b> بيانات الجهاز والاستخدام (مثل الصفحات المُشاهدة والأداء وسجلات الأعطال) لتحسين الموثوقية والأمان.</li>
+  <li><b>معلومات حساسة:</b> حسب استخدامك، قد تقدم معلومات متعلقة بالصحة. نتعامل معها كمعلومات حساسة ونطبق ضمانات إضافية.</li>
+  <li><b>معلومات الأعمال/التاجر:</b> إذا كنت تدير متجرًا على TrustyDr Commerce، نجمع معلومات العمل والمنتج والطلب اللازمة لتشغيل متجرك — راجع سياسة خصوصية TrustyDr Commerce الخاصة للتفاصيل الخاصة بتلك المنصة.</li>
 </ul>
-<h2>الاحتفاظ والحذف</h2>
-<p>نحتفظ بالبيانات بالقدر اللازم لتقديم الخدمة. يمكنك طلب حذف بياناتك عبر صفحة حذف البيانات.</p></div>
+
+<h2>3. كيف نستخدم المعلومات</h2>
+<ul>
+  <li>تقديم الخدمات وتشغيلها</li>
+  <li>تحسين الموثوقية والأمان وتجربة المستخدم</li>
+  <li>الرد على طلبات الدعم والتواصل المتعلق بالخدمة</li>
+  <li>الامتثال للالتزامات القانونية وتطبيق شروطنا</li>
+</ul>
+
+<h2>4. المشاركة</h2>
+<p>قد نشارك المعلومات مع مزودي الخدمات الذين يساعدوننا في تشغيل الخدمات (الاستضافة، البريد/الرسائل النصية، التحليلات، أدوات الدعم)؛ ومع مقدمي الرعاية الصحية عند طلب المواعيد؛ ومع التجار وشركاء التوصيل عند تقديم طلب سوق؛ أو عند الاقتضاء بموجب القانون. لا نبيع المعلومات الشخصية.</p>
+
+<h2>5. الاحتفاظ بالبيانات</h2>
+<p>نحتفظ بالبيانات الشخصية فقط طالما لزم الأمر لتقديم الخدمات والوفاء بالمتطلبات القانونية والأمنية. يمكنك طلب الحذف عبر صفحة حذف البيانات.</p>
+
+<h2>6. الأمان</h2>
+<p>نستخدم ضمانات مصممة لحماية المعلومات. لا يوجد نظام آمن بنسبة 100%، لكننا نعمل على الحفاظ على حماية مناسبة.</p>
+
+<h2>7. حقوقك</h2>
+<p>حسب موقعك، قد يكون لديك حقوق في الوصول إلى بياناتك الشخصية أو تصحيحها أو حذفها أو تقييد معالجتها. راسلنا عبر <a href="mailto:support@trustydr.com">support@trustydr.com</a> لتقديم طلب.</p>
+
+<h2>8. ملفات تعريف الارتباط</h2>
+<p>قد نستخدم ملفات تعريف ارتباط ضرورية لعمل الموقع الأساسي. إذا أضفنا ملفات تعريف ارتباط تحليلية غير أساسية، سنوفر إشعارًا حيثما يقتضي الأمر.</p>
+
+<h2>9. التغييرات</h2>
+<p>قد نحدّث هذه السياسة من وقت لآخر وسنحدّث تاريخ السريان وفقًا لذلك.</p></div>
   </div>
 </section>
 <footer class="footer">
@@ -80,7 +115,8 @@
         <a href="/ar/about/">من نحن</a>
         <a href="/ar/how-it-works/">كيف يعمل</a>
         <a href="/ar/for-patients/">للمرضى</a>
-        <a href="/ar/for-doctors/">للأطباء</a>
+        <a href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+        <a href="/ar/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>الدعم</h4>
@@ -96,9 +132,9 @@
       </div>
       <div>
         <h4>البوابات</h4>
-        <a href="#download">تحميل التطبيق</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">بوابة الإدارة</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">المريض</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">مقدمو الرعاية الصحية</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">بازدان بۆ ناوەڕۆک</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>پلاتفۆرمی تەندروستی پارێزراو</span>
+          <span>سیستەمی تەندروستی و بازرگانی</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="کردنەوەی لیست" data-label-open="کردنەوەی لیست" data-label-close="داخستنی لیست">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ku/">سەرەکی</a>
 <a data-nav href="/ku/how-it-works/">چۆن کار دەکات</a>
 <a data-nav href="/ku/for-patients/">بۆ نەخۆشان</a>
-<a data-nav href="/ku/for-doctors/">بۆ پزیشکان</a>
+<a data-nav href="/ku/for-doctors/">بۆ دابینکەرانی تەندروستی</a>
+<a data-nav href="/ku/for-commerce/">Commerce</a>
 <a data-nav href="/ku/faq/">پرسیارە باوەکان</a>
 <a data-nav href="/ku/contact/">پەیوەندی</a>
 <a data-nav href="/ku/support/">پشتگیری</a>
@@ -45,12 +53,11 @@
 
         <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">پۆرتاڵی نەخۆش</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی پزیشکان</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">ئادمین</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
     <div class="breadcrumb">TrustyDr / پرسیارە باوەکان</div>
     <h1>پرسیارە باوەکان</h1>
@@ -94,7 +101,8 @@
         <a href="/ku/about/">دەربارە</a>
         <a href="/ku/how-it-works/">چۆن کار دەکات</a>
         <a href="/ku/for-patients/">بۆ نەخۆشان</a>
-        <a href="/ku/for-doctors/">بۆ پزیشکان</a>
+        <a href="/ku/for-doctors/">بۆ دابینکەرانی تەندروستی</a>
+        <a href="/ku/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>پشتگیری</h4>
@@ -110,9 +118,9 @@
       </div>
       <div>
         <h4>پۆرتاڵەکان</h4>
-        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">پۆرتاڵی نەخۆش</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی پزیشکان</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی ئادمین</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">نەخۆش</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">دابینکەرانی تەندروستی</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

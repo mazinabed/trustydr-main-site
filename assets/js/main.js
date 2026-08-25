@@ -34,8 +34,52 @@
       if(a.getAttribute('data-lang')===current) a.classList.add('active');
     });
   }
+  // Mobile navigation disclosure — replaces the old "menu just disappears
+  // below 980px" behavior. Toggle button carries data-label-open/close
+  // (already localized per-page in HTML) so this file stays
+  // language-agnostic, matching bindLangSwitcher's own convention above.
+  function bindNavToggle(){
+    var toggle = document.querySelector('.navToggle');
+    var menu = document.getElementById('primaryMenu');
+    if(!toggle || !menu) return;
+
+    function setOpen(open){
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var label = open ? toggle.getAttribute('data-label-close') : toggle.getAttribute('data-label-open');
+      if(label) toggle.setAttribute('aria-label', label);
+    }
+
+    toggle.addEventListener('click', function(){
+      setOpen(!menu.classList.contains('open'));
+    });
+
+    // Escape closes the menu and returns focus to the toggle button.
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && menu.classList.contains('open')){
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    // Clicking a nav link closes the panel (single-page navigation still
+    // reloads to a new URL here, but this keeps state correct for
+    // back/forward-cache restores).
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
+
+    // Click outside the nav closes it too.
+    document.addEventListener('click', function(e){
+      if(!menu.classList.contains('open')) return;
+      if(menu.contains(e.target) || toggle.contains(e.target)) return;
+      setOpen(false);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function(){
     setActiveNav();
     bindLangSwitcher();
+    bindNavToggle();
   });
 })();

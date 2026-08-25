@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>منصة رعاية صحية آمنة</span>
+          <span>منظومة الرعاية الصحية والتجارة</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="فتح القائمة" data-label-open="فتح القائمة" data-label-close="إغلاق القائمة">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ar/">الرئيسية</a>
 <a data-nav href="/ar/how-it-works/">كيف يعمل</a>
 <a data-nav href="/ar/for-patients/">للمرضى</a>
-<a data-nav href="/ar/for-doctors/">للأطباء</a>
+<a data-nav href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+<a data-nav href="/ar/for-commerce/">Commerce</a>
 <a data-nav href="/ar/faq/">الأسئلة الشائعة</a>
 <a data-nav href="/ar/contact/">تواصل معنا</a>
 <a data-nav href="/ar/support/">الدعم</a>
@@ -45,31 +53,30 @@
 
         <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">بوابة المريض</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">الإدارة</a>
       </div>
     </div>
   </div>
 </header>
-<section class="hero">
+<section class="hero" id="main">
   <div class="container">
     <div class="heroCard">
       <div class="heroInner">
         <div>
-          <h1>مواعيد الرعاية الصحية أصبحت أسهل وأكثر أمانًا.</h1>
-          <p>يساعد TrustyDr المرضى على العثور على أطباء وطلب المواعيد وإدارة الزيارات — بتصميم يراعي الخصوصية وسياسات واضحة.</p>
+          <h1>منظومة واحدة متصلة للرعاية الصحية والتجارة.</h1>
+          <p>يجمع TrustyDr بين رعاية المرضى، وأدوات مقدمي الرعاية الصحية، والتجارة عبر السوق — ثلاث منصات متصلة، وأساس واحد موثوق.</p>
           <div class="ctaRow">
             <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">فتح بوابة المريض</a>
-            <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener" style="background: rgba(74,144,226,.9); border:none;">
-              بوابة الأطباء
+            <a class="btn ghost" href="#platforms" style="background: rgba(74,144,226,.9); border:none;">
+              استكشف المنظومة
             </a>
           </div>
         </div>
         <aside class="heroSide">
-          <div class="pill">🔗 <b>روابط المنصة</b></div>
+          <div class="pill">🔗 <b>ثلاث منصات، منظومة واحدة</b></div>
           <div class="kv">
-            <div class="row"><span>بوابة المريض</span><span>online</span></div>
-            <div class="row"><span>بوابة الأطباء</span><span>online</span></div>
-            <div class="row"><span>بوابة الإدارة</span><span>online</span></div>
+            <div class="row"><span>مقدمو الرعاية الصحية</span><span>doctor.trustydr.com</span></div>
+            <div class="row"><span>المرضى</span><span>app.trustydr.com</span></div>
+            <div class="row"><span>Commerce</span><span>commerce.trustydr.com</span></div>
           </div>
           <div style="margin-top:14px;" class="notice">
             <b>الدعم:</b> <a href="mailto:support@trustydr.com">support@trustydr.com</a><br>
@@ -81,13 +88,60 @@
   </div>
 </section>
 
+<section class="section" id="platforms">
+  <div class="container">
+    <h2 class="sectionTitle">ثلاث منصات، TrustyDr واحد</h2>
+    <p class="sectionSub">أيًا كان الباب الذي تدخل منه، أنت على نفس الأساس الموثوق. اختر المكان المناسب لك.</p>
+    <div class="platformCards">
+      <div class="platformCard providers">
+        <div class="icon">🩺</div>
+        <p class="audience">الأطباء · العيادات والمراكز الطبية · الصيدليات</p>
+        <h3>TrustyDr لمقدمي الرعاية الصحية</h3>
+        <p class="desc">أدر عيادتك عبر الإنترنت — الجدول، طلبات المواعيد، وعمليات الصيدلية في مكان واحد.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>إدارة التوفر والجدول</span></li>
+          <li><span class="check">✓</span><span>استقبال طلبات المواعيد عبر الإنترنت</span></li>
+          <li><span class="check">✓</span><span>أدوات طلبات ومخزون الصيدلية</span></li>
+          <li><span class="check">✓</span><span>إنشاء ملف احترافي لمقدم الرعاية</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">الذهاب إلى بوابة الأطباء</a></div>
+      </div>
+      <div class="platformCard patients">
+        <div class="icon">❤️</div>
+        <p class="audience">المرضى</p>
+        <h3>TrustyDr للمرضى</h3>
+        <p class="desc">اعثر على أطباء موثوقين، احجز المواعيد، وأدر زياراتك وطلباتك — كل ذلك في تطبيق واحد.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>اعثر على أطباء حسب المدينة والتخصص</span></li>
+          <li><span class="check">✓</span><span>اطلب موعدًا خلال دقائق</span></li>
+          <li><span class="check">✓</span><span>اطلب من صيدليات موثوقة</span></li>
+          <li><span class="check">✓</span><span>متوفر بالإنجليزية والعربية والكردية</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">فتح بوابة المريض</a></div>
+      </div>
+      <div class="platformCard commerce">
+        <div class="icon">🛒</div>
+        <p class="audience">الأعمال والتجار</p>
+        <h3>TrustyDr Commerce</h3>
+        <p class="desc">أدر متجرك على سوق TrustyDr — بِع مباشرة للمرضى أو تاجر بالجملة مع أعمال أخرى.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>سوق للبيع المباشر للمرضى (B2C)</span></li>
+          <li><span class="check">✓</span><span>طلبات جملة بين الأعمال (B2B)</span></li>
+          <li><span class="check">✓</span><span>إدارة المتجر والطلبات والمخزون</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://commerce.trustydr.com" target="_blank" rel="noopener">فتح TrustyDr Commerce</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <h2 class="sectionTitle">ما هو TrustyDr؟</h2>
-    <p class="sectionSub">منصة ويب مبنية لتسهيل حجز وإدارة مواعيد الرعاية الصحية للمرضى والأطباء.</p>
+    <p class="sectionSub">TrustyDr منظومة متصلة للرعاية الصحية والتجارة — ثلاث منصات مبنية على أساس واحد موثوق.</p>
     <div class="grid3">
-      <div class="card"><h3>اعثر على أطباء موثوقين</h3><p>اكتشف مقدمي الرعاية حسب المدينة والتخصص والتوفر.</p></div>
-      <div class="card"><h3>احجز خلال دقائق</h3><p>اطلب موعدًا واختر الوقت المناسب وتلقَّ تذكيرات.</p></div>
+      <div class="card"><h3>مبني من أجل الرعاية الصحية</h3><p>كل منصة في منظومة TrustyDr مصممة حول الثقة والخصوصية وواقع الرعاية الصحية.</p></div>
+      <div class="card"><h3>متعدد اللغات دائمًا</h3><p>متوفر بالإنجليزية والعربية والكردية عبر كل منصة.</p></div>
       <div class="card"><h3>الخصوصية أولًا</h3><p>نقلل جمع البيانات ونحمي المنصة ونوفر تعليمات حذف واضحة.</p></div>
     </div>
   </div>
@@ -95,37 +149,9 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="sectionTitle">اختر مسارك</h2>
-    <p class="sectionSub">يدعم TrustyDr المرضى والأطباء بتجربة ويب بسيطة لكل طرف.</p>
-    <div class="grid2">
-      <div class="card">
-        <h3>للمرضى</h3>
-        <ul class="list">
-          <li><span class="check">✓</span><span>اعثر على أطباء حسب المدينة والتخصص</span></li><li><span class="check">✓</span><span>اطلب موعدًا خلال دقائق</span></li><li><span class="check">✓</span><span>تذكيرات وإدارة المواعيد القادمة</span></li><li><span class="check">✓</span><span>متوفر بالإنجليزية والعربية والكردية</span></li>
-        </ul>
-        <div style="margin-top:14px;">
-          <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">فتح بوابة المريض</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>للأطباء</h3>
-        <ul class="list">
-          <li><span class="check">✓</span><span>إدارة التوفر والجدول</span></li><li><span class="check">✓</span><span>استقبال طلبات المواعيد عبر الإنترنت</span></li><li><span class="check">✓</span><span>إنشاء ملف طبي احترافي</span></li><li><span class="check">✓</span><span>دعم المرضى بعدة لغات</span></li>
-        </ul>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">الذهاب إلى بوابة الأطباء</a>
-          <a class="btn ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">بوابة الإدارة</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
     <h2 class="sectionTitle">كيف يعمل</h2>
-    <p class="sectionSub">خطوات بسيطة للبدء — للمرضى والأطباء.</p>
-    <div class="split">
+    <p class="sectionSub">خطوات بسيطة للبدء — للمرضى ومقدمي الرعاية الصحية والأعمال.</p>
+    <div class="grid3">
       <div class="card">
         <h3>للمرضى</h3>
         <ol class="muted" style="margin:10px 0 0; padding-right:18px;">
@@ -133,9 +159,15 @@
         </ol>
       </div>
       <div class="card">
-        <h3>للأطباء</h3>
+        <h3>لمقدمي الرعاية الصحية</h3>
         <ol class="muted" style="margin:10px 0 0; padding-right:18px;">
           <li style="margin:8px 0;">سجّل الدخول</li><li style="margin:8px 0;">أكمل ملفك</li><li style="margin:8px 0;">حدد التوفر</li><li style="margin:8px 0;">استقبل الحجوزات</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>لـ Commerce</h3>
+        <ol class="muted" style="margin:10px 0 0; padding-right:18px;">
+          <li style="margin:8px 0;">سجّل الدخول</li><li style="margin:8px 0;">أنشئ متجرك</li><li style="margin:8px 0;">أضف المنتجات</li><li style="margin:8px 0;">استقبل الطلبات</li>
         </ol>
       </div>
     </div>
@@ -169,7 +201,8 @@
         <a href="/ar/about/">من نحن</a>
         <a href="/ar/how-it-works/">كيف يعمل</a>
         <a href="/ar/for-patients/">للمرضى</a>
-        <a href="/ar/for-doctors/">للأطباء</a>
+        <a href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+        <a href="/ar/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>الدعم</h4>
@@ -185,9 +218,9 @@
       </div>
       <div>
         <h4>البوابات</h4>
-        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">بوابة المريض</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">بوابة الإدارة</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">المريض</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">مقدمو الرعاية الصحية</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

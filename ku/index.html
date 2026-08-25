@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">بازدان بۆ ناوەڕۆک</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>پلاتفۆرمی تەندروستی پارێزراو</span>
+          <span>سیستەمی تەندروستی و بازرگانی</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="کردنەوەی لیست" data-label-open="کردنەوەی لیست" data-label-close="داخستنی لیست">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ku/">سەرەکی</a>
 <a data-nav href="/ku/how-it-works/">چۆن کار دەکات</a>
 <a data-nav href="/ku/for-patients/">بۆ نەخۆشان</a>
-<a data-nav href="/ku/for-doctors/">بۆ پزیشکان</a>
+<a data-nav href="/ku/for-doctors/">بۆ دابینکەرانی تەندروستی</a>
+<a data-nav href="/ku/for-commerce/">Commerce</a>
 <a data-nav href="/ku/faq/">پرسیارە باوەکان</a>
 <a data-nav href="/ku/contact/">پەیوەندی</a>
 <a data-nav href="/ku/support/">پشتگیری</a>
@@ -45,31 +53,30 @@
 
         <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">پۆرتاڵی نەخۆش</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی پزیشکان</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">ئادمین</a>
       </div>
     </div>
   </div>
 </header>
-<section class="hero">
+<section class="hero" id="main">
   <div class="container">
     <div class="heroCard">
       <div class="heroInner">
         <div>
-          <h1>دانانی میعادەکانی تەندروستی بە سادەیی و پارێزراوی.</h1>
-          <p>TrustyDr یارمەتیدەدات نەخۆش دۆکتۆر بدۆزێتەوە، داوای میعاد بکات و سەردانەکان بەڕێوەببات — بە تایبەتمەندی-سەرەکی و سیاسەتە ڕوونەکان.</p>
+          <h1>یەک سیستەمی پەیوەستی تەندروستی و بازرگانی.</h1>
+          <p>TrustyDr چاودێری نەخۆشان، ئامرازەکانی دابینکەرانی تەندروستی، و بازرگانی بازاڕ کۆدەکاتەوە — سێ پلاتفۆرمی پەیوەست، یەک بناغەی متمانەپێکراو.</p>
           <div class="ctaRow">
             <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">کردنەوەی پۆرتاڵی نەخۆش</a>
-            <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener" style="background: rgba(74,144,226,.9); border:none;">
-              پۆرتاڵی پزیشکان
+            <a class="btn ghost" href="#platforms" style="background: rgba(74,144,226,.9); border:none;">
+              سیستەمەکە بگەڕێ
             </a>
           </div>
         </div>
         <aside class="heroSide">
-          <div class="pill">🔗 <b>لینکەکانی پلاتفۆرم</b></div>
+          <div class="pill">🔗 <b>سێ پلاتفۆرم، یەک سیستەم</b></div>
           <div class="kv">
-            <div class="row"><span>پۆرتاڵی نەخۆش</span><span>online</span></div>
-            <div class="row"><span>پۆرتاڵی پزیشکان</span><span>online</span></div>
-            <div class="row"><span>پۆرتاڵی ئادمین</span><span>online</span></div>
+            <div class="row"><span>دابینکەرانی تەندروستی</span><span>doctor.trustydr.com</span></div>
+            <div class="row"><span>نەخۆشان</span><span>app.trustydr.com</span></div>
+            <div class="row"><span>Commerce</span><span>commerce.trustydr.com</span></div>
           </div>
           <div style="margin-top:14px;" class="notice">
             <b>پشتگیری:</b> <a href="mailto:support@trustydr.com">support@trustydr.com</a><br>
@@ -81,13 +88,60 @@
   </div>
 </section>
 
+<section class="section" id="platforms">
+  <div class="container">
+    <h2 class="sectionTitle">سێ پلاتفۆرم، یەک TrustyDr</h2>
+    <p class="sectionSub">لە هەر دەرگایەک بچیتە ژوورەوە، لەسەر هەمان بناغەی متمانەپێکراوی. شوێنی خۆت هەڵبژێرە.</p>
+    <div class="platformCards">
+      <div class="platformCard providers">
+        <div class="icon">🩺</div>
+        <p class="audience">پزیشکان · کلینیک و ناوەندە پزیشکییەکان · دەرمانخانەکان</p>
+        <h3>TrustyDr بۆ دابینکەرانی تەندروستی</h3>
+        <p class="desc">کلینیکەکەت بەڕێوەببە لە ئۆنلاین — کاتژمێر، داواکاری میعاد، و کارەکانی دەرمانخانە لە یەک شوێندا.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>بەڕێوەبردنی بەردەستبوون و کاتژمێر</span></li>
+          <li><span class="check">✓</span><span>وەربگرانی داواکاری میعاد</span></li>
+          <li><span class="check">✓</span><span>ئامرازەکانی داواکاری و کۆگای دەرمانخانە</span></li>
+          <li><span class="check">✓</span><span>دروستکردنی پڕۆفایلێکی پیشەیی</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">چوونە پۆرتاڵی پزیشکان</a></div>
+      </div>
+      <div class="platformCard patients">
+        <div class="icon">❤️</div>
+        <p class="audience">نەخۆشان</p>
+        <h3>TrustyDr بۆ نەخۆشان</h3>
+        <p class="desc">پزیشکی متمانەپێکراو بدۆزەوە، میعاد حجز بکە، و سەردان و داواکاریەکانت بەڕێوەببە — هەموو لە یەک ئەپدا.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>پزیشک بە شار و پسپۆڕی بدۆزەوە</span></li>
+          <li><span class="check">✓</span><span>داوای میعاد بکە لە چەند خولەکدا</span></li>
+          <li><span class="check">✓</span><span>داواکاری لە دەرمانخانە متمانەپێکراوەکان بکە</span></li>
+          <li><span class="check">✓</span><span>بەردەستە بە زمانی کوردی، عەرەبی و ئینگلیزی</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">کردنەوەی پۆرتاڵی نەخۆش</a></div>
+      </div>
+      <div class="platformCard commerce">
+        <div class="icon">🛒</div>
+        <p class="audience">بازرگان و کۆمپانیاکان</p>
+        <h3>TrustyDr Commerce</h3>
+        <p class="desc">دوکانەکەت لەسەر بازاڕی TrustyDr بەڕێوەببە — ڕاستەوخۆ بۆ نەخۆشان بفرۆشە یان بە کۆمەڵ لەگەڵ کۆمپانیای تر بازرگانی بکە.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>بازاڕی B2C بۆ نەخۆشان</span></li>
+          <li><span class="check">✓</span><span>داواکاری کۆمەڵی B2B لەنێوان کۆمپانیاکان</span></li>
+          <li><span class="check">✓</span><span>بەڕێوەبردنی دوکان، داواکاری و کۆگا</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://commerce.trustydr.com" target="_blank" rel="noopener">کردنەوەی TrustyDr Commerce</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <h2 class="sectionTitle">TrustyDr چییە؟</h2>
-    <p class="sectionSub">پلاتفۆرمێکی وێب بۆ ئاسانکردنی حجز و بەڕێوەبردنی میعادەکانی تەندروستی بۆ نەخۆش و پزیشک.</p>
+    <p class="sectionSub">TrustyDr سیستەمێکی پەیوەستی تەندروستی و بازرگانییە — سێ پلاتفۆرم لەسەر یەک بناغەی متمانەپێکراو.</p>
     <div class="grid3">
-      <div class="card"><h3>پزیشک بدۆزەوە</h3><p>بە شار و پسپۆڕی و بەردەستبوون بگەڕێ.</p></div>
-      <div class="card"><h3>خێرا حجز بکە</h3><p>داوای میعاد بکە و کاتێک هەڵبژێرە و یادەوەری وەربگرە.</p></div>
+      <div class="card"><h3>بۆ تەندروستی دروستکراوە</h3><p>هەموو پلاتفۆرمێک لە سیستەمی TrustyDr بە پێی متمانە و تایبەتمەندی و ڕاستیەکانی تەندروستی دیزاین کراوە.</p></div>
+      <div class="card"><h3>هەمیشە بە چەند زمان</h3><p>بەردەستە بە زمانی ئینگلیزی، عەرەبی و کوردی لە هەموو پلاتفۆرمەکاندا.</p></div>
       <div class="card"><h3>تایبەتمەندی سەرەکیە</h3><p>کەمترین داتا کۆدەکەینەوە و ڕێنمایی سڕینەوەی ڕوون هەیە.</p></div>
     </div>
   </div>
@@ -95,37 +149,9 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="sectionTitle">ڕێگاکەت هەڵبژێرە</h2>
-    <p class="sectionSub">TrustyDr هەردوو لایەن پشتگیری دەکات — بە ئەزموونێکی وێبی سادە.</p>
-    <div class="grid2">
-      <div class="card">
-        <h3>بۆ نەخۆشان</h3>
-        <ul class="list">
-          <li><span class="check">✓</span><span>پزیشک بە شار و پسپۆڕی بدۆزەوە</span></li><li><span class="check">✓</span><span>داوای میعاد بکە لە چەند خولەکدا</span></li><li><span class="check">✓</span><span>یادەوەری و بەڕێوەبردنی میعادەکان</span></li><li><span class="check">✓</span><span>بەردەستە بە زمانی کوردی، عەرەبی و ئینگلیزی</span></li>
-        </ul>
-        <div style="margin-top:14px;">
-          <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">کردنەوەی پۆرتاڵی نەخۆش</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>بۆ پزیشکان</h3>
-        <ul class="list">
-          <li><span class="check">✓</span><span>بەڕێوەبردنی بەردەستبوون و کاتژمێر</span></li><li><span class="check">✓</span><span>وەربگرانی داواکاری میعاد</span></li><li><span class="check">✓</span><span>پڕۆفایلی پزیشکی پیشەیی</span></li><li><span class="check">✓</span><span>پشتگیری بە چەند زمان</span></li>
-        </ul>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">چوونە پۆرتاڵی پزیشکان</a>
-          <a class="btn ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی ئادمین</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
     <h2 class="sectionTitle">چۆن کار دەکات</h2>
-    <p class="sectionSub">چەند هەنگاوێکی سادە بۆ دەستپێکردن.</p>
-    <div class="split">
+    <p class="sectionSub">چەند هەنگاوێکی سادە بۆ دەستپێکردن — بۆ نەخۆشان، دابینکەرانی تەندروستی و کۆمپانیاکان.</p>
+    <div class="grid3">
       <div class="card">
         <h3>بۆ نەخۆشان</h3>
         <ol class="muted" style="margin:10px 0 0; padding-right:18px;">
@@ -133,9 +159,15 @@
         </ol>
       </div>
       <div class="card">
-        <h3>بۆ پزیشکان</h3>
+        <h3>بۆ دابینکەرانی تەندروستی</h3>
         <ol class="muted" style="margin:10px 0 0; padding-right:18px;">
           <li style="margin:8px 0;">چوونە ژوورەوە</li><li style="margin:8px 0;">پڕۆفایل تەواو بکە</li><li style="margin:8px 0;">بەردەستبوون دابنێ</li><li style="margin:8px 0;">میعاد وەربگرە</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>بۆ Commerce</h3>
+        <ol class="muted" style="margin:10px 0 0; padding-right:18px;">
+          <li style="margin:8px 0;">چوونە ژوورەوە</li><li style="margin:8px 0;">دوکانەکەت دروست بکە</li><li style="margin:8px 0;">بەرهەم زیاد بکە</li><li style="margin:8px 0;">داواکاری وەربگرە</li>
         </ol>
       </div>
     </div>
@@ -169,7 +201,8 @@
         <a href="/ku/about/">دەربارە</a>
         <a href="/ku/how-it-works/">چۆن کار دەکات</a>
         <a href="/ku/for-patients/">بۆ نەخۆشان</a>
-        <a href="/ku/for-doctors/">بۆ پزیشکان</a>
+        <a href="/ku/for-doctors/">بۆ دابینکەرانی تەندروستی</a>
+        <a href="/ku/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>پشتگیری</h4>
@@ -185,9 +218,9 @@
       </div>
       <div>
         <h4>پۆرتاڵەکان</h4>
-        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">پۆرتاڵی نەخۆش</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی پزیشکان</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی ئادمین</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">نەخۆش</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">دابینکەرانی تەندروستی</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

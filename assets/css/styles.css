@@ -28,6 +28,18 @@ a:hover{opacity:.92;}
 small{color:var(--muted);}
 .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px;}
 
+/* Keyboard accessibility: a consistent, visible focus ring everywhere,
+   plus a skip-link that lets keyboard/screen-reader users jump straight
+   past the header to each page's main content (id="main"). */
+:focus-visible{outline:3px solid #0b63c9;outline-offset:2px;border-radius:6px;}
+.skip-link{
+  position:absolute;left:12px;top:-60px;z-index:1000;
+  background:#0b1220;color:#fff;padding:10px 16px;border-radius:10px;
+  font-size:14px;font-weight:600;transition:top .15s ease;
+}
+.skip-link:focus{top:12px;}
+html[dir="rtl"] .skip-link{left:auto;right:12px;}
+
 .topbar{
   position:sticky;top:0;z-index:100;
   background: linear-gradient(135deg, var(--g1), var(--g2));
@@ -44,6 +56,17 @@ small{color:var(--muted);}
 .menu{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;}
 .menu a{font-size:14px;opacity:.95;padding:8px 10px;border-radius:12px;}
 .menu a.active,.menu a:hover{background: rgba(255,255,255,.16);}
+
+/* Mobile nav toggle — hidden on desktop; shown only under the 980px
+   breakpoint below, where it replaces the old "menu just disappears"
+   behavior with a real open/close disclosure. min 44px touch target. */
+.navToggle{
+  display:none;width:44px;height:44px;padding:0;
+  border:1px solid rgba(255,255,255,.3);border-radius:12px;
+  background:rgba(255,255,255,.12);cursor:pointer;
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+}
+.navToggleBar{width:20px;height:2px;background:#fff;border-radius:2px;display:block;}
 
 .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end;min-width:300px;}
 
@@ -139,80 +162,54 @@ html[dir="rtl"] .heroSide{border-left:none;border-right:1px solid rgba(0,0,0,.06
 .prose ul{margin:10px 0 10px 20px;}
 html[dir="rtl"] .prose ul{margin:10px 20px 10px 0;}
 
+/* Ecosystem platform cards (Healthcare Providers / Patients / Commerce) —
+   substantial entrance cards, not plain .grid3 boxes: icon chip, audience
+   label, short description, up to 4 capability bullets, and a strong CTA.
+   Built from the same tokens/shadow/radius as the rest of the site. */
+.platformCards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.platformCard{
+  background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:22px;
+  box-shadow:var(--shadow);padding:26px;display:flex;flex-direction:column;gap:14px;
+  border-top:4px solid var(--g2);transition:transform .15s ease, box-shadow .15s ease;
+}
+.platformCard:hover,.platformCard:focus-within{
+  transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.10);
+}
+.platformCard.commerce{border-top-color:#0f766e;}
+.platformCard.providers{border-top-color:var(--g2);}
+.platformCard.patients{border-top-color:var(--g1);}
+.platformCard .icon{
+  width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
+  font-size:26px;background:linear-gradient(135deg, rgba(78,198,198,.16), rgba(74,144,226,.16));
+}
+.platformCard h3{margin:0;font-size:20px;letter-spacing:-.2px;}
+.platformCard .audience{margin:0;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+.platformCard p.desc{margin:0;color:var(--text);}
+.platformCard .list{margin:0;gap:8px;}
+.platformCard .cta{margin-top:auto;padding-top:6px;}
+.platformCard .btn{width:100%;justify-content:center;color:#fff;border:none;}
+.platformCard .btn.primary{background:linear-gradient(135deg, var(--g1), var(--g2));color:#fff;}
+
 @media (max-width: 980px){
-  .menu{display:none;}
+  /* Real mobile nav: the toggle button appears, and the menu becomes a
+     collapsible panel (JS toggles .menu.open) instead of just vanishing.
+     aria-expanded on the button reflects state for screen readers. */
+  .navToggle{display:flex;}
+  .menu{
+    display:none;flex-direction:column;align-items:stretch;
+    width:100%;order:3;gap:4px;padding:10px 0 4px;
+  }
+  .menu.open{display:flex;}
+  .menu a{padding:12px 14px;min-height:44px;display:flex;align-items:center;border-radius:12px;}
+  .nav{flex-wrap:wrap;}
   .heroInner{grid-template-columns:1fr;}
   .heroSide{border-left:none;border-top:1px solid rgba(0,0,0,.06);}
   html[dir="rtl"] .heroSide{border-right:none;}
-  .grid3,.grid2,.split{grid-template-columns:1fr;}
+  .grid3,.grid2,.split,.platformCards{grid-template-columns:1fr;}
   .footerGrid{grid-template-columns:1fr 1fr;}
 }
 @media (max-width: 520px){
   .hero h1{font-size:36px;}
   .footerGrid{grid-template-columns:1fr;}
 }
-
-
-/* ---- DEBUG FIX: remove invisible overlay ---- */
-.hero,
-.heroCard,
-.heroInner {
-  pointer-events: none !important;
-}
-
-a, button, .btn, nav, footer {
-  pointer-events: auto !important;
-}
-
-.hero::before,
-.hero::after,
-.heroCard::before,
-.heroCard::after {
-  pointer-events: none !important;
-}
-.notice,
-.section,
-.topbar,
-.footer {
-  position: relative;
-  z-index: 2;
-}
-body * {
-  pointer-events: auto;
-}
-
-
-/* ===== CLICK FIX ===== */
-
-/* Force all sections to behave normally */
-section {
-  position: relative !important;
-  z-index: auto !important;
-  pointer-events: auto !important;
-}
-
-/* Kill any overlay behavior */
-.hero,
-.section {
-  overflow: visible !important;
-}
-
-/* Ensure links always receive clicks */
-a, button {
-  position: relative;
-  z-index: 10;
-  pointer-events: auto !important;
-}
-
-/* Prevent pseudo overlays */
-.hero::before,
-.hero::after,
-.section::before,
-.section::after {
-  content: none !important;
-  display: none !important;
-  pointer-events: none !important;
-}
-
-/* ===== CLICK FIX FOR LARGE SECTIONS ===== */
 

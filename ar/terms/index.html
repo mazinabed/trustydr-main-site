@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>منصة رعاية صحية آمنة</span>
+          <span>منظومة الرعاية الصحية والتجارة</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="فتح القائمة" data-label-open="فتح القائمة" data-label-close="إغلاق القائمة">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ar/">الرئيسية</a>
 <a data-nav href="/ar/how-it-works/">كيف يعمل</a>
 <a data-nav href="/ar/for-patients/">للمرضى</a>
-<a data-nav href="/ar/for-doctors/">للأطباء</a>
+<a data-nav href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+<a data-nav href="/ar/for-commerce/">Commerce</a>
 <a data-nav href="/ar/faq/">الأسئلة الشائعة</a>
 <a data-nav href="/ar/contact/">تواصل معنا</a>
 <a data-nav href="/ar/support/">الدعم</a>
@@ -43,14 +51,13 @@
           <a href="#" data-lang="ku">کوردی</a>
         </div>
 
-        <a class="btn primary" href="#download">تحميل التطبيق</a>
+        <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">بوابة المريض</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">الإدارة</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
     <div class="breadcrumb">TrustyDr / شروط الاستخدام</div>
     <h1>شروط الاستخدام</h1>
@@ -60,10 +67,32 @@
 <section class="content">
   <div class="container">
     <div class="prose"><p><b>تاريخ السريان:</b> 17 يناير 2026</p>
-<p>تحكم هذه الشروط استخدامك لخدمات TrustyDr. باستخدامك للخدمة، أنت توافق على هذه الشروط.</p>
-<h2>لا نقدم نصيحة طبية</h2>
-<p>TrustyDr منصة لتسهيل الوصول لمقدمي الرعاية الصحية وطلبات المواعيد. لا نقدم رعاية طبية أو نصائح طبية.</p>
-<h2>التواصل</h2>
+<p>تحكم هذه الشروط استخدامك لموقع TrustyDr ومنظومة TrustyDr المتصلة من المنصات — حاليًا TrustyDr للمرضى، وTrustyDr لمقدمي الرعاية الصحية، وTrustyDr Commerce (يُشار إليها معًا بـ"الخدمات"). باستخدامك للخدمات، أنت توافق على هذه الشروط.</p>
+
+<h2>1. دور المنصة (لا نقدّم نصيحة طبية)</h2>
+<p>يساعد TrustyDr المستخدمين على العثور على مقدمي الرعاية الصحية وطلب المواعيد وإدارتها. لا يقدم TrustyDr رعاية طبية أو نصائح طبية. مقدمو الرعاية الصحية هم المسؤولون عن الخدمات الطبية والتشخيص والعلاج.</p>
+<p>إذا كنت تعتقد أنك تواجه حالة طوارئ طبية، اتصل بخدمات الطوارئ المحلية فورًا.</p>
+
+<h2>2. الحسابات والأمان</h2>
+<ul>
+  <li>أنت مسؤول عن الحفاظ على سرية حسابك.</li>
+  <li>توافق على تقديم معلومات دقيقة وتحديثها باستمرار.</li>
+  <li>قد نعلّق الحسابات التي تبدو احتيالية أو مسيئة أو غير آمنة.</li>
+</ul>
+
+<h2>3. الاستخدام المقبول</h2>
+<p>توافق على عدم إساءة استخدام الخدمات أو محاولة الوصول غير المصرح به أو التدخل في أمان المنصة.</p>
+
+<h2>4. المواعيد</h2>
+<p>قد يحدد مقدمو الرعاية توفر المواعيد وتأكيدها والرسوم وقواعد الإلغاء. لا يضمن TrustyDr التوفر أو النتائج.</p>
+
+<h2>5. TrustyDr Commerce</h2>
+<p>TrustyDr Commerce منصة سوق وعمليات أعمال متصلة للتجار والمشترين، تشمل كلًا من الشراء المباشر من المرضى (B2C) والطلبات بالجملة بين الأعمال (B2B). تخضع شروط الشراء والبيع والتزامات التاجر والدفع والاسترداد الخاصة بـ TrustyDr Commerce لشروط الخدمة واتفاقية التاجر الخاصة بـ TrustyDr Commerce، وليس لهذه الوثيقة.</p>
+
+<h2>6. إخلاء المسؤولية</h2>
+<p>يتم تقديم الخدمات "كما هي" و"كما هي متاحة". وإلى أقصى حد يسمح به القانون، يخلي TrustyDr مسؤوليته عن ضمانات القابلية للتسويق والملاءمة لغرض معين وعدم الانتهاك.</p>
+
+<h2>7. التواصل</h2>
 <p>الدعم: <a href="mailto:support@trustydr.com">support@trustydr.com</a></p></div>
   </div>
 </section>
@@ -75,7 +104,8 @@
         <a href="/ar/about/">من نحن</a>
         <a href="/ar/how-it-works/">كيف يعمل</a>
         <a href="/ar/for-patients/">للمرضى</a>
-        <a href="/ar/for-doctors/">للأطباء</a>
+        <a href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+        <a href="/ar/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>الدعم</h4>
@@ -91,9 +121,9 @@
       </div>
       <div>
         <h4>البوابات</h4>
-        <a href="#download">تحميل التطبيق</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">بوابة الإدارة</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">المريض</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">مقدمو الرعاية الصحية</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

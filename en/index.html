@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TrustyDr | Home</title>
-  <meta name="description" content="Healthcare appointments made simple and secure.">
+  <meta name="description" content="TrustyDr is a connected healthcare and commerce ecosystem — for patients, healthcare providers, and businesses.">
   <link rel="canonical" href="https://www.trustydr.com/en/">
   <meta property="og:site_name" content="TrustyDr">
   <meta property="og:title" content="TrustyDr | Home">
-  <meta property="og:description" content="Healthcare appointments made simple and secure.">
+  <meta property="og:description" content="TrustyDr is a connected healthcare and commerce ecosystem — for patients, healthcare providers, and businesses.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.trustydr.com/assets/img/logo.png">
   <link rel="icon" href="/assets/img/logo.png">
@@ -16,6 +16,7 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -23,15 +24,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>Secure healthcare platform</span>
+          <span>Healthcare &amp; commerce ecosystem</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/en/">Home</a>
 <a data-nav href="/en/how-it-works/">How it works</a>
 <a data-nav href="/en/for-patients/">For Patients</a>
-<a data-nav href="/en/for-doctors/">For Doctors</a>
+<a data-nav href="/en/for-doctors/">For Healthcare Providers</a>
+<a data-nav href="/en/for-commerce/">Commerce</a>
 <a data-nav href="/en/faq/">FAQ</a>
 <a data-nav href="/en/contact/">Contact</a>
 <a data-nav href="/en/support/">Support</a>
@@ -46,31 +54,30 @@
 
         <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient Portal</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Doctor Portal</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin</a>
       </div>
     </div>
   </div>
 </header>
-<section class="hero">
+<section class="hero" id="main">
   <div class="container">
     <div class="heroCard">
       <div class="heroInner">
         <div>
-          <h1>Healthcare appointments made simple and secure.</h1>
-          <p>TrustyDr helps patients find trusted doctors, request appointments, and manage visits — with privacy-first design and transparent policies.</p>
+          <h1>One connected ecosystem for healthcare and commerce.</h1>
+          <p>TrustyDr brings together care for patients, tools for healthcare providers, and marketplace commerce — three connected platforms, one trusted foundation.</p>
           <div class="ctaRow">
             <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">Open Patient Portal</a>
-            <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener" style="background: rgba(74,144,226,.9); border:none;">
-              Doctor Portal
+            <a class="btn ghost" href="#platforms" style="background: rgba(74,144,226,.9); border:none;">
+              Explore the ecosystem
             </a>
           </div>
         </div>
         <aside class="heroSide">
-          <div class="pill">🔗 <b>Platform links</b></div>
+          <div class="pill">🔗 <b>Three platforms, one ecosystem</b></div>
           <div class="kv">
-            <div class="row"><span>Patient Portal</span><span>online</span></div>
-            <div class="row"><span>Doctor Portal</span><span>online</span></div>
-            <div class="row"><span>Admin Portal</span><span>online</span></div>
+            <div class="row"><span>Healthcare Providers</span><span>doctor.trustydr.com</span></div>
+            <div class="row"><span>Patients</span><span>app.trustydr.com</span></div>
+            <div class="row"><span>Commerce</span><span>commerce.trustydr.com</span></div>
           </div>
           <div style="margin-top:14px;" class="notice">
             <b>Support:</b> <a href="mailto:support@trustydr.com">support@trustydr.com</a><br>
@@ -82,13 +89,60 @@
   </div>
 </section>
 
+<section class="section" id="platforms">
+  <div class="container">
+    <h2 class="sectionTitle">Three platforms, one TrustyDr</h2>
+    <p class="sectionSub">Whichever door you walk through, you're on the same trusted foundation. Choose where you belong.</p>
+    <div class="platformCards">
+      <div class="platformCard providers">
+        <div class="icon">🩺</div>
+        <p class="audience">Doctors · Clinics &amp; Medical Centers · Pharmacies</p>
+        <h3>TrustyDr for Healthcare Providers</h3>
+        <p class="desc">Manage your practice online — schedule, appointment requests, and pharmacy operations in one place.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>Manage availability and schedule</span></li>
+          <li><span class="check">✓</span><span>Receive appointment requests online</span></li>
+          <li><span class="check">✓</span><span>Pharmacy order and inventory tools</span></li>
+          <li><span class="check">✓</span><span>Build a professional provider profile</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Go to Doctor Portal</a></div>
+      </div>
+      <div class="platformCard patients">
+        <div class="icon">❤️</div>
+        <p class="audience">Patients</p>
+        <h3>TrustyDr for Patients</h3>
+        <p class="desc">Find trusted doctors, book appointments, and manage your visits and orders — all in one app.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>Find doctors by city and specialty</span></li>
+          <li><span class="check">✓</span><span>Request appointments in minutes</span></li>
+          <li><span class="check">✓</span><span>Order from trusted pharmacies</span></li>
+          <li><span class="check">✓</span><span>Available in English, Arabic, and Kurdish</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">Open Patient Portal</a></div>
+      </div>
+      <div class="platformCard commerce">
+        <div class="icon">🛒</div>
+        <p class="audience">Businesses &amp; Merchants</p>
+        <h3>TrustyDr Commerce</h3>
+        <p class="desc">Run your store on TrustyDr's marketplace — sell directly to patients or trade wholesale with other businesses.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span>B2C marketplace for patients</span></li>
+          <li><span class="check">✓</span><span>B2B wholesale ordering between businesses</span></li>
+          <li><span class="check">✓</span><span>Store, order, and inventory management</span></li>
+        </ul>
+        <div class="cta"><a class="btn primary" href="https://commerce.trustydr.com" target="_blank" rel="noopener">Open TrustyDr Commerce</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <h2 class="sectionTitle">What is TrustyDr?</h2>
-    <p class="sectionSub">A web-based platform built to make booking and managing healthcare appointments easier for patients and providers.</p>
+    <p class="sectionSub">TrustyDr is a connected healthcare and commerce ecosystem — three platforms built on one trusted foundation.</p>
     <div class="grid3">
-      <div class="card"><h3>Find trusted doctors</h3><p>Discover healthcare providers by city, specialty, and availability.</p></div>
-      <div class="card"><h3>Book in minutes</h3><p>Request an appointment, choose the best time, and stay organized with reminders.</p></div>
+      <div class="card"><h3>Built for healthcare</h3><p>Every platform in the TrustyDr ecosystem is designed around trust, privacy, and the realities of healthcare.</p></div>
+      <div class="card"><h3>Multilingual by default</h3><p>Available in English, Arabic, and Kurdish across every platform.</p></div>
       <div class="card"><h3>Privacy-first</h3><p>We minimize data collection, secure the platform, and provide clear deletion instructions.</p></div>
     </div>
   </div>
@@ -96,37 +150,9 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="sectionTitle">Choose your path</h2>
-    <p class="sectionSub">TrustyDr supports both patients and doctors — with a simple web experience for each.</p>
-    <div class="grid2">
-      <div class="card">
-        <h3>For Patients</h3>
-        <ul class="list">
-          <li><span class="check">✓</span><span>Find doctors by city and specialty</span></li><li><span class="check">✓</span><span>Request appointments in minutes</span></li><li><span class="check">✓</span><span>Get reminders and manage upcoming visits</span></li><li><span class="check">✓</span><span>Available in English, Arabic, and Kurdish</span></li>
-        </ul>
-        <div style="margin-top:14px;">
-          <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">Open Patient Portal</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>For Doctors</h3>
-        <ul class="list">
-          <li><span class="check">✓</span><span>Manage availability and schedule</span></li><li><span class="check">✓</span><span>Receive appointment requests online</span></li><li><span class="check">✓</span><span>Build a professional doctor profile</span></li><li><span class="check">✓</span><span>Support patients in multiple languages</span></li>
-        </ul>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Go to Doctor Portal</a>
-          <a class="btn ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin Portal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
     <h2 class="sectionTitle">How it works</h2>
-    <p class="sectionSub">Simple steps to get started — for patients and doctors.</p>
-    <div class="split">
+    <p class="sectionSub">Simple steps to get started — for patients, healthcare providers, and businesses.</p>
+    <div class="grid3">
       <div class="card">
         <h3>For Patients</h3>
         <ol class="muted" style="margin:10px 0 0; padding-left:18px;">
@@ -134,9 +160,15 @@
         </ol>
       </div>
       <div class="card">
-        <h3>For Doctors</h3>
+        <h3>For Healthcare Providers</h3>
         <ol class="muted" style="margin:10px 0 0; padding-left:18px;">
           <li style="margin:8px 0;">Sign in</li><li style="margin:8px 0;">Complete your profile</li><li style="margin:8px 0;">Set availability</li><li style="margin:8px 0;">Receive bookings</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>For Commerce</h3>
+        <ol class="muted" style="margin:10px 0 0; padding-left:18px;">
+          <li style="margin:8px 0;">Sign in</li><li style="margin:8px 0;">Set up your store</li><li style="margin:8px 0;">List products</li><li style="margin:8px 0;">Receive orders</li>
         </ol>
       </div>
     </div>
@@ -170,7 +202,8 @@
         <a href="/en/about/">About</a>
         <a href="/en/how-it-works/">How it works</a>
         <a href="/en/for-patients/">For Patients</a>
-        <a href="/en/for-doctors/">For Doctors</a>
+        <a href="/en/for-doctors/">For Healthcare Providers</a>
+        <a href="/en/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>Support</h4>
@@ -180,15 +213,15 @@
       </div>
       <div>
         <h4>Legal</h4>
-        <a href="/en/privacy/">Privacy Policy</a>
-        <a href="/en/terms/">Terms of Service</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
         <a href="/data-deletion/">Data Deletion</a>
       </div>
       <div>
-        <h4>Portals</h4>
-        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient Portal</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">Doctor Portal</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin Portal</a>
+        <h4>Platforms</h4>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">Healthcare Providers</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

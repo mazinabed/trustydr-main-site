@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>منصة رعاية صحية آمنة</span>
+          <span>منظومة الرعاية الصحية والتجارة</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="فتح القائمة" data-label-open="فتح القائمة" data-label-close="إغلاق القائمة">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ar/">الرئيسية</a>
 <a data-nav href="/ar/how-it-works/">كيف يعمل</a>
 <a data-nav href="/ar/for-patients/">للمرضى</a>
-<a data-nav href="/ar/for-doctors/">للأطباء</a>
+<a data-nav href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+<a data-nav href="/ar/for-commerce/">Commerce</a>
 <a data-nav href="/ar/faq/">الأسئلة الشائعة</a>
 <a data-nav href="/ar/contact/">تواصل معنا</a>
 <a data-nav href="/ar/support/">الدعم</a>
@@ -43,14 +51,13 @@
           <a href="#" data-lang="ku">کوردی</a>
         </div>
 
-        <a class="btn primary" href="#download">تحميل التطبيق</a>
+        <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">بوابة المريض</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">الإدارة</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
     <div class="breadcrumb">TrustyDr / حذف البيانات</div>
     <h1>تعليمات حذف البيانات</h1>
@@ -60,11 +67,21 @@
 <section class="content">
   <div class="container">
     <div class="prose"><p><b>تاريخ السريان:</b> 17 يناير 2026</p>
-<p>يمكنك حذف حسابك وبياناتك من خلال:</p>
-<h2>من داخل التطبيق</h2>
-<ol><li>الإعدادات</li><li>الحساب</li><li>حذف الحساب</li></ol>
-<h2>عبر البريد</h2>
-<p>أرسل طلبًا إلى <a href="mailto:support@trustydr.com">support@trustydr.com</a> بعنوان “Account Deletion Request” مع البريد/الرقم المستخدم في الحساب.</p></div>
+<p>يوفر TrustyDr طرقًا لحذف حسابك والبيانات الشخصية المرتبطة به عبر منظومة TrustyDr — لحسابات المرضى، وحسابات مقدمي الرعاية الصحية، وحسابات التجار/الأعمال على TrustyDr Commerce.</p>
+
+<h2>طلب الحذف عبر البريد الإلكتروني</h2>
+<p>أرسل بريدًا إلى <a href="mailto:support@trustydr.com">support@trustydr.com</a> بعنوان <b>"Account Deletion Request"</b>. يُرجى إخبارنا بالمنصة التي عليها حسابك (المريض، مقدم الرعاية الصحية، أو Commerce)، وإرفاق البريد الإلكتروني أو رقم الهاتف المستخدم في حسابك.</p>
+
+<h2>مدة تنفيذ الحذف</h2>
+<p>عادة ما نعالج طلبات الحذف خلال <b>30 يومًا</b>.</p>
+
+<h2>ما الذي نحتفظ به</h2>
+<p>يحتفظ TrustyDr ببعض السجلات حتى بعد حذف الحساب، عند الاقتضاء أو عندما يؤدي حذفها إلى الإخلال بسجلات يعتمد عليها آخرون أو أعمال أخرى بشكل مشروع:</p>
+<ul>
+  <li>قد يتم الاحتفاظ بسجلات المواعيد والطلبات المكتملة كإيصالات تاريخية.</li>
+  <li>قد يتم الاحتفاظ ببيانات محدودة لأغراض قانونية أو أمنية أو محاسبية/ضريبية أو لمنع الاحتيال.</li>
+</ul>
+<p>حيثما يجب الاحتفاظ بالبيانات، نقيّد الوصول إليها ونحتفظ فقط بما هو ضروري.</p></div>
   </div>
 </section>
 <footer class="footer">
@@ -75,7 +92,8 @@
         <a href="/ar/about/">من نحن</a>
         <a href="/ar/how-it-works/">كيف يعمل</a>
         <a href="/ar/for-patients/">للمرضى</a>
-        <a href="/ar/for-doctors/">للأطباء</a>
+        <a href="/ar/for-doctors/">لمقدمي الرعاية الصحية</a>
+        <a href="/ar/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>الدعم</h4>
@@ -91,9 +109,9 @@
       </div>
       <div>
         <h4>البوابات</h4>
-        <a href="#download">تحميل التطبيق</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">بوابة الأطباء</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">بوابة الإدارة</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">المريض</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">مقدمو الرعاية الصحية</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

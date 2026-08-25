@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>Secure healthcare platform</span>
+          <span>Healthcare &amp; commerce ecosystem</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/en/">Home</a>
 <a data-nav href="/en/how-it-works/">How it works</a>
 <a data-nav href="/en/for-patients/">For Patients</a>
-<a data-nav href="/en/for-doctors/">For Doctors</a>
+<a data-nav href="/en/for-doctors/">For Healthcare Providers</a>
+<a data-nav href="/en/for-commerce/">Commerce</a>
 <a data-nav href="/en/faq/">FAQ</a>
 <a data-nav href="/en/contact/">Contact</a>
 <a data-nav href="/en/support/">Support</a>
@@ -43,29 +51,27 @@
           <a href="#" data-lang="ku">کوردی</a>
         </div>
 
-        <a class="btn primary" href="#download">Download App</a>
+        <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient Portal</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Doctor Portal</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
-    <div class="breadcrumb">TrustyDr / For Doctors</div>
-    <h1>For Doctors</h1>
-    <p class="sectionSub" style="margin-top:10px;">Manage your schedule, receive booking requests, and grow your practice with TrustyDr.</p>
+    <div class="breadcrumb">TrustyDr / For Healthcare Providers</div>
+    <h1>For Healthcare Providers</h1>
+    <p class="sectionSub" style="margin-top:10px;">For doctors, clinics and medical centers, and pharmacies — manage your practice online and grow with TrustyDr.</p>
   </div>
 </section>
 <section class="content">
   <div class="container">
-    <div class="prose"><p>Manage your schedule, receive booking requests, and grow your practice with TrustyDr.</p>
-<ul class="list"><li><span class="check">✓</span><span>Manage availability and schedule</span></li><li><span class="check">✓</span><span>Receive appointment requests online</span></li><li><span class="check">✓</span><span>Build a professional doctor profile</span></li><li><span class="check">✓</span><span>Support patients in multiple languages</span></li></ul>
+    <div class="prose"><p>TrustyDr for Healthcare Providers gives doctors, clinics/medical centers, and pharmacies the tools to run their practice online — schedule, appointment requests, and pharmacy order and inventory operations, in one place.</p>
+<ul class="list"><li><span class="check">✓</span><span>Manage availability and schedule</span></li><li><span class="check">✓</span><span>Receive appointment requests online</span></li><li><span class="check">✓</span><span>Pharmacy order and inventory tools</span></li><li><span class="check">✓</span><span>Build a professional provider profile</span></li><li><span class="check">✓</span><span>Support patients in multiple languages</span></li></ul>
 <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
   <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Go to Doctor Portal</a>
-  <a class="btn ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin Portal</a>
 </div>
-<p class="muted" style="margin-top:10px;">Access the doctor portal to manage your clinic presence.</p></div>
+<p class="muted" style="margin-top:10px;">Access the provider portal to manage your clinic or pharmacy presence.</p></div>
   </div>
 </section>
 <footer class="footer">
@@ -76,7 +82,8 @@
         <a href="/en/about/">About</a>
         <a href="/en/how-it-works/">How it works</a>
         <a href="/en/for-patients/">For Patients</a>
-        <a href="/en/for-doctors/">For Doctors</a>
+        <a href="/en/for-doctors/">For Healthcare Providers</a>
+        <a href="/en/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>Support</h4>
@@ -91,10 +98,10 @@
         <a href="/data-deletion/">Data Deletion</a>
       </div>
       <div>
-        <h4>Portals</h4>
-        <a href="#download">Download App</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">Doctor Portal</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin Portal</a>
+        <h4>Platforms</h4>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">Healthcare Providers</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

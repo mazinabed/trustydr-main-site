@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>Secure healthcare platform</span>
+          <span>Healthcare &amp; commerce ecosystem</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/en/">Home</a>
 <a data-nav href="/en/how-it-works/">How it works</a>
 <a data-nav href="/en/for-patients/">For Patients</a>
-<a data-nav href="/en/for-doctors/">For Doctors</a>
+<a data-nav href="/en/for-doctors/">For Healthcare Providers</a>
+<a data-nav href="/en/for-commerce/">Commerce</a>
 <a data-nav href="/en/faq/">FAQ</a>
 <a data-nav href="/en/contact/">Contact</a>
 <a data-nav href="/en/support/">Support</a>
@@ -43,14 +51,13 @@
           <a href="#" data-lang="ku">کوردی</a>
         </div>
 
-        <a class="btn primary" href="#download">Download App</a>
+        <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient Portal</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Doctor Portal</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
     <div class="breadcrumb">TrustyDr / Data Deletion</div>
     <h1>Data Deletion Instructions</h1>
@@ -60,22 +67,21 @@
 <section class="content">
   <div class="container">
     <div class="prose"><p><b>Effective date:</b> January 17, 2026</p>
-<p>TrustyDr provides ways to delete your account and associated personal data.</p>
+<p>TrustyDr provides ways to delete your account and associated personal data across the TrustyDr ecosystem — for Patient accounts, Healthcare Provider accounts, and TrustyDr Commerce merchant/business accounts.</p>
 
-<h2>Option 1: Delete your account in the TrustyDr app (recommended)</h2>
-<ol>
-  <li>Open the TrustyDr app</li>
-  <li>Go to <b>Settings</b></li>
-  <li>Select <b>Account</b></li>
-  <li>Tap <b>Delete Account</b></li>
-  <li>Confirm deletion</li>
-</ol>
-
-<h2>Option 2: Request deletion by email</h2>
-<p>Email <a href="mailto:support@trustydr.com">support@trustydr.com</a> with the subject <b>“Account Deletion Request”</b> and include the email or phone number used for your TrustyDr account.</p>
+<h2>Request deletion by email</h2>
+<p>Email <a href="mailto:support@trustydr.com">support@trustydr.com</a> with the subject <b>“Account Deletion Request”</b>. Please tell us which TrustyDr platform your account is on (Patient, Healthcare Provider, or Commerce) and include the email or phone number used for your account.</p>
 
 <h2>Deletion timeline</h2>
-<p>We typically process deletion requests within <b>30 days</b>. If we must retain limited data for legal or security reasons, we will restrict it and retain only what is necessary.</p></div>
+<p>We typically process deletion requests within <b>30 days</b>.</p>
+
+<h2>What we retain</h2>
+<p>TrustyDr keeps certain records even after account deletion, where required or where deleting them would break records that other people or businesses legitimately rely on:</p>
+<ul>
+  <li>Completed appointment and order records may be retained as historical receipts.</li>
+  <li>Limited data may be retained for legal, security, tax/accounting, or fraud-prevention purposes.</li>
+</ul>
+<p>Where data must be retained, we restrict it and keep only what is necessary.</p></div>
   </div>
 </section>
 <footer class="footer">
@@ -86,7 +92,8 @@
         <a href="/en/about/">About</a>
         <a href="/en/how-it-works/">How it works</a>
         <a href="/en/for-patients/">For Patients</a>
-        <a href="/en/for-doctors/">For Doctors</a>
+        <a href="/en/for-doctors/">For Healthcare Providers</a>
+        <a href="/en/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>Support</h4>
@@ -101,10 +108,10 @@
         <a href="/data-deletion/">Data Deletion</a>
       </div>
       <div>
-        <h4>Portals</h4>
-        <a href="#download">Download App</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">Doctor Portal</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">Admin Portal</a>
+        <h4>Platforms</h4>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">Patient</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">Healthcare Providers</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">

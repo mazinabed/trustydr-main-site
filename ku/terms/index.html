@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">بازدان بۆ ناوەڕۆک</a>
 <header class="topbar">
   <div class="container">
     <div class="nav">
@@ -22,15 +23,22 @@
         <img src="/assets/img/logo.png" alt="TrustyDr logo">
         <div class="name">
           <strong>TrustyDr</strong>
-          <span>پلاتفۆرمی تەندروستی پارێزراو</span>
+          <span>سیستەمی تەندروستی و بازرگانی</span>
         </div>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <button type="button" class="navToggle" aria-expanded="false" aria-controls="primaryMenu" aria-label="کردنەوەی لیست" data-label-open="کردنەوەی لیست" data-label-close="داخستنی لیست">
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+        <span class="navToggleBar"></span>
+      </button>
+
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
         <a data-nav href="/ku/">سەرەکی</a>
 <a data-nav href="/ku/how-it-works/">چۆن کار دەکات</a>
 <a data-nav href="/ku/for-patients/">بۆ نەخۆشان</a>
-<a data-nav href="/ku/for-doctors/">بۆ پزیشکان</a>
+<a data-nav href="/ku/for-doctors/">بۆ دابینکەرانی تەندروستی</a>
+<a data-nav href="/ku/for-commerce/">Commerce</a>
 <a data-nav href="/ku/faq/">پرسیارە باوەکان</a>
 <a data-nav href="/ku/contact/">پەیوەندی</a>
 <a data-nav href="/ku/support/">پشتگیری</a>
@@ -43,14 +51,13 @@
           <a href="#" data-lang="ku">کوردی</a>
         </div>
 
-        <a class="btn primary" href="#download">داگرتنی ئەپ</a>
+        <a class="btn primary" href="https://app.trustydr.com/" target="_blank" rel="noopener">پۆرتاڵی نەخۆش</a>
         <a class="btn ghost" href="https://doctor.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی پزیشکان</a>
-        <a class="btn small ghost" href="https://admin.trustydr.com" target="_blank" rel="noopener">ئادمین</a>
       </div>
     </div>
   </div>
 </header>
-<section class="pageHeader">
+<section class="pageHeader" id="main">
   <div class="container">
     <div class="breadcrumb">TrustyDr / مەرجەکانی بەکارهێنان</div>
     <h1>مەرجەکانی بەکارهێنان</h1>
@@ -60,10 +67,33 @@
 <section class="content">
   <div class="container">
     <div class="prose"><p><b>ڕێکەوتی کارپێکردن:</b> 17ی کانونی دووەمی 2026</p>
-<p>ئەم مەرجانە بەکارهێنانی خزمەتگوزارییەکانی TrustyDr ڕێکدەخەن. بە بەکارهێنان، تۆ ڕازی دەبیت.</p>
-<h2>نەبوونی ڕاوێژی پزیشکی</h2>
-<p>TrustyDr پلاتفۆرمێکە بۆ پەیوەستکردن بە پێشکەشکەرانی تەندروستی و داوای میعاد. خاوەن ڕاوێژی پزیشکی نییە.</p>
-<p><a href="mailto:support@trustydr.com">support@trustydr.com</a></p></div>
+<p>ئەم مەرجانە بەکارهێنانی تۆ بۆ ماڵپەڕی TrustyDr و سیستەمی پەیوەستی پلاتفۆرمەکانی TrustyDr ڕێکدەخات — لە ئێستادا TrustyDr بۆ نەخۆشان، TrustyDr بۆ دابینکەرانی تەندروستی، و TrustyDr Commerce (پێکەوە "خزمەتگوزارییەکان"). بە بەکارهێنانی خزمەتگوزارییەکان، تۆ ڕازیت لەسەر ئەم مەرجانە.</p>
+
+<h2>1. ڕۆڵی پلاتفۆرم (ڕاوێژی پزیشکی نادەین)</h2>
+<p>TrustyDr یارمەتی بەکارهێنەران دەدات پێشکەشکەرانی تەندروستی بدۆزنەوە و داوای میعاد بکەن و بەڕێوەیبەن. TrustyDr چاودێری پزیشکی یان ڕاوێژی پزیشکی پێشکەش ناکات. پێشکەشکەرانی تەندروستی بەرپرسیارن لە خزمەتگوزاری پزیشکی، دیاگنۆز و چارەسەرکردن.</p>
+<p>ئەگەر پێت وایە تووشی حاڵەتێکی نائاسایی پزیشکی بوویت، دەستبەجێ پەیوەندی بە ژمارەی فریاگوزاری خۆت بکە.</p>
+
+<h2>2. هەژمار و پاراستن</h2>
+<ul>
+  <li>تۆ بەرپرسیاریت لە پاراستنی نهێنی هەژمارەکەت.</li>
+  <li>ڕازیت زانیاری ڕاست دابین بکەیت و نوێی بکەیتەوە.</li>
+  <li>لەوانەیە هەژمارگەلێک ڕاگرین کە پیشانی فێڵ یان سووءیستفادە یان نائاسایی دەدەن.</li>
+</ul>
+
+<h2>3. بەکارهێنانی قبوڵکراو</h2>
+<p>ڕازیت خزمەتگوزارییەکان بە خراپ بەکار نەهێنیت، هەوڵی چوونەژوورەوەی نایاسایی نەدەیت، یان دەستێوەردان لە پاراستنی پلاتفۆرم نەکەیت.</p>
+
+<h2>4. میعادەکان</h2>
+<p>بەردەستبوونی میعاد، پشتڕاستکردنەوە، نرخ و ڕێسای هەڵوەشاندنەوە لەوانەیە لەلایەن دابینکەرانەوە دیاری بکرێت. TrustyDr بەردەستبوون یان ئەنجام مسۆگەر ناکات.</p>
+
+<h2>5. TrustyDr Commerce</h2>
+<p>TrustyDr Commerce پلاتفۆرمێکی بازاڕ و کارگێڕی بازرگانیی پەیوەستە بۆ بازرگان و کڕیاران، کە هەردوو کڕین و فرۆشتنی ڕاستەوخۆ بۆ نەخۆشان (B2C) و داواکاری کۆمەڵی نێوان کۆمپانیاکان (B2B) لەخۆدەگرێت. مەرجەکانی کڕین و فرۆشتن و ئەرکەکانی بازرگان و پارەدان و گەڕاندنەوەی TrustyDr Commerce لەژێر مەرجەکانی خزمەتگوزاری و ڕێککەوتنی بازرگانی تایبەت بە TrustyDr Commerce دایە، نەک ئەم بەڵگەنامەیە.</p>
+
+<h2>6. ڕەتکردنەوەکان</h2>
+<p>خزمەتگوزارییەکان "بەو شێوەیەی هەیە" و "بەو شێوەیەی بەردەستە" پێشکەش دەکرێن. تا ئەو ڕادەیەی یاسا ڕێگە دەدات، TrustyDr هیچ ڕەگەزێکی گەرەنتی بازرگانی یان گونجاویی بۆ مەبەستێکی دیاریکراو یان سەرپێچی نەکردن ڕەت ناکاتەوە.</p>
+
+<h2>7. پەیوەندی</h2>
+<p>پشتگیری: <a href="mailto:support@trustydr.com">support@trustydr.com</a></p></div>
   </div>
 </section>
 <footer class="footer">
@@ -74,7 +104,8 @@
         <a href="/ku/about/">دەربارە</a>
         <a href="/ku/how-it-works/">چۆن کار دەکات</a>
         <a href="/ku/for-patients/">بۆ نەخۆشان</a>
-        <a href="/ku/for-doctors/">بۆ پزیشکان</a>
+        <a href="/ku/for-doctors/">بۆ دابینکەرانی تەندروستی</a>
+        <a href="/ku/for-commerce/">Commerce</a>
       </div>
       <div>
         <h4>پشتگیری</h4>
@@ -90,9 +121,9 @@
       </div>
       <div>
         <h4>پۆرتاڵەکان</h4>
-        <a href="#download">داگرتنی ئەپ</a>
-        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی پزیشکان</a>
-        <a href="https://admin.trustydr.com" target="_blank" rel="noopener">پۆرتاڵی ئادمین</a>
+        <a href="https://app.trustydr.com/" target="_blank" rel="noopener">نەخۆش</a>
+        <a href="https://doctor.trustydr.com" target="_blank" rel="noopener">دابینکەرانی تەندروستی</a>
+        <a href="https://commerce.trustydr.com" target="_blank" rel="noopener">Commerce</a>
       </div>
     </div>
     <div class="footerBottom">
