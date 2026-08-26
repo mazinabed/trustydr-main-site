@@ -10,6 +10,13 @@
       ],
       "cleanUrls": true,
       "trailingSlash": true,
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "/en/",
+          "type": 301
+        }
+      ],
       "headers": [
         {
           "source": "**",
