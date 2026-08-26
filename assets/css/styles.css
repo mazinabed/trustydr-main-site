@@ -53,6 +53,15 @@ html[dir="rtl"] .skip-link{left:auto;right:12px;}
 .brand .name strong{font-size:18px;letter-spacing:.2px;}
 .brand .name span{font-size:12px;opacity:.9;}
 
+/* Desktop: navPanel is a transparent wrapper only — .menu (nav links) and
+   .actions (lang switcher + portal buttons) render exactly as if they were
+   direct flex children of .nav, unchanged from before this wrapper existed.
+   Below the 980px breakpoint this becomes the single collapsible panel that
+   the hamburger toggles, so nav links + lang + portal buttons all hide/show
+   together instead of the actions row staying pinned open and crowding the
+   closed header. */
+.navPanel{display:contents;}
+
 .menu{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;}
 .menu a{font-size:14px;opacity:.95;padding:8px 10px;border-radius:12px;}
 .menu a.active,.menu a:hover{background: rgba(255,255,255,.16);}
@@ -207,16 +216,27 @@ html[dir="rtl"] .prose ul{margin:10px 20px 10px 0;}
 .platformCard .btn.primary{background:linear-gradient(135deg, var(--g1), var(--g2));color:#fff;}
 
 @media (max-width: 980px){
-  /* Real mobile nav: the toggle button appears, and the menu becomes a
-     collapsible panel (JS toggles .menu.open) instead of just vanishing.
-     aria-expanded on the button reflects state for screen readers. */
+  /* Real mobile nav: the toggle button appears, and navPanel (nav links +
+     lang switcher + portal buttons together) becomes a single collapsible
+     panel (JS toggles .navPanel.open on the element with id="primaryMenu")
+     instead of the actions row staying permanently visible and crowding
+     the closed header. aria-expanded on the button reflects state for
+     screen readers. Closed header now shows only brand + toggle. */
   .navToggle{display:flex;}
-  .menu{
+  .navPanel{
     display:none;flex-direction:column;align-items:stretch;
-    width:100%;order:3;gap:4px;padding:10px 0 4px;
+    width:100%;order:3;gap:14px;padding:10px 0 4px;
   }
-  .menu.open{display:flex;}
+  .navPanel.open{display:flex;}
+  .menu{display:flex;flex-direction:column;align-items:stretch;gap:4px;}
   .menu a{padding:12px 14px;min-height:44px;display:flex;align-items:center;border-radius:12px;}
+  .actions{
+    flex-direction:column;align-items:stretch;justify-content:flex-start;
+    min-width:0;gap:10px;
+    border-top:1px solid rgba(255,255,255,.18);padding-top:14px;
+  }
+  .actions .lang{justify-content:center;}
+  .actions .btn{width:100%;justify-content:center;}
   .nav{flex-wrap:wrap;}
   .heroInner{grid-template-columns:1fr;}
   .heroSide{border-left:none;border-top:1px solid rgba(0,0,0,.06);}
