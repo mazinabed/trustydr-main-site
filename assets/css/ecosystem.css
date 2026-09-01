@@ -1,0 +1,273 @@
+/* TrustyDr connected-care diagram.
+   ---------------------------------------------------------------------------
+   Explains the ecosystem rather than decorating the page: the patient sits at
+   the centre, and a narrated sequence of pulses travels the connections in the
+   order real TrustyDr workflows happen (book -> prescribe -> dispense ->
+   test -> results).
+
+   Geometry is deliberately symmetric about the vertical axis, so the diagram
+   reads identically in LTR and RTL; only the text needs to flip. Mirroring the
+   nodes per direction would move Pharmacy and Laboratory for no gain and break
+   the muscle memory of anyone who has seen the other locale.
+
+   Uses the site tokens in styles.css (--g1, --g2, --text, --muted, --border).
+   No build step, no framework - same as the rest of this site. */
+
+.eco {
+  --eco-line: #CBD5E1;
+  --eco-live: var(--g1);
+  --eco-doctor: #4A90E2;
+  --eco-pharmacy: #17A398;
+  --eco-lab: #7C6BD6;
+  --eco-patient: #0F766E;
+}
+
+.ecoEyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--g2);
+}
+
+.ecoLead {
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 62ch;
+}
+
+.ecoLayout {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* ── Stage ────────────────────────────────────────────────────────────── */
+
+.ecoStage {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+  aspect-ratio: 5 / 4;
+}
+
+.ecoStage svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ecoEdge {
+  fill: none;
+  stroke: var(--eco-line);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* The travelling pulse. pathLength="100" normalises every edge to the same
+   units, so one keyframe set drives paths of very different real lengths. */
+.ecoPulse {
+  fill: none;
+  stroke: var(--eco-live);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-dasharray: 14 100;
+  stroke-dashoffset: 14;
+  opacity: 0;
+}
+
+.ecoEdgeGroup.is-active .ecoEdge {
+  stroke: var(--eco-live);
+  opacity: .55;
+}
+
+.ecoEdgeGroup.is-active .ecoPulse {
+  opacity: 1;
+  animation: ecoTravel 1.75s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+
+.ecoEdgeGroup.is-reverse .ecoPulse {
+  animation-name: ecoTravelReverse;
+}
+
+@keyframes ecoTravel {
+  from { stroke-dashoffset: 14; }
+  to   { stroke-dashoffset: -100; }
+}
+
+@keyframes ecoTravelReverse {
+  from { stroke-dashoffset: -100; }
+  to   { stroke-dashoffset: 14; }
+}
+
+/* ── Nodes ────────────────────────────────────────────────────────────── */
+/* HTML rather than SVG <text>: real text rendering, real font stack, real
+   RTL shaping, and reachable by a screen reader in document order. */
+
+.ecoNode {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  width: 104px;
+}
+
+.ecoNodeDot {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--border);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, .08);
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.ecoNodeDot svg {
+  position: static;
+  width: 26px;
+  height: 26px;
+  overflow: visible;
+}
+
+.ecoNodeLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+/* PHYSICAL `left`, deliberately — not inset-inline-start.
+   These coordinates have to agree with the SVG paths behind them, and the SVG
+   viewBox does not flip in RTL. Using a logical property mirrored the nodes
+   away from their own edges and pushed the pharmacy off the left of the
+   viewport at 375px. The diagram is fixed geometry; only its text flips. */
+.ecoNode.is-patient { left: 50%; top: 50%; }
+.ecoNode.is-doctor  { left: 50%; top: 15%; }
+.ecoNode.is-lab     { left: 18%; top: 82.5%; }
+.ecoNode.is-pharmacy{ left: 82%; top: 82.5%; }
+
+/* The patient is the centre of the experience, so it reads as the anchor
+   even before anything animates. */
+.ecoNode.is-patient .ecoNodeDot {
+  width: 78px;
+  height: 78px;
+  border-color: var(--eco-patient);
+  border-width: 2.5px;
+}
+.ecoNode.is-patient .ecoNodeDot svg { width: 32px; height: 32px; }
+
+.ecoNode.is-doctor   .ecoNodeDot { color: var(--eco-doctor); }
+.ecoNode.is-pharmacy .ecoNodeDot { color: var(--eco-pharmacy); }
+.ecoNode.is-lab      .ecoNodeDot { color: var(--eco-lab); }
+.ecoNode.is-patient  .ecoNodeDot { color: var(--eco-patient); }
+
+.ecoNode.is-lit .ecoNodeDot {
+  transform: scale(1.08);
+  border-color: currentColor;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, .14);
+}
+
+/* ── Narration ────────────────────────────────────────────────────────── */
+
+.ecoSteps { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+
+.ecoStep {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  opacity: .55;
+  transition: opacity .35s ease, border-color .35s ease, transform .35s ease;
+}
+
+.ecoStep.is-active {
+  opacity: 1;
+  border-color: var(--eco-live);
+  transform: translateY(-1px);
+}
+
+.ecoStepIndex {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.ecoStep.is-active .ecoStepIndex {
+  background: var(--eco-live);
+  border-color: var(--eco-live);
+  color: #fff;
+}
+
+.ecoStepTitle { font-weight: 700; font-size: 14px; color: var(--text); }
+.ecoStepText  { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+.ecoControls { display: flex; gap: 10px; align-items: center; margin-top: 14px; }
+
+.ecoToggle {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.ecoToggle:hover { background: var(--bg); }
+.ecoToggle:focus-visible { outline: 2px solid var(--g2); outline-offset: 2px; }
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .ecoLayout { grid-template-columns: 1fr; gap: 22px; }
+  .ecoStage { max-width: 440px; }
+  .ecoNode { width: 88px; }
+  .ecoNodeDot { width: 54px; height: 54px; }
+  .ecoNode.is-patient .ecoNodeDot { width: 66px; height: 66px; }
+}
+
+@media (max-width: 520px) {
+  .ecoStage { max-width: 340px; }
+  .ecoNode { width: 74px; }
+  .ecoNodeLabel { font-size: 12px; }
+  .ecoNodeDot { width: 46px; height: 46px; }
+  .ecoNodeDot svg { width: 20px; height: 20px; }
+  .ecoNode.is-patient .ecoNodeDot { width: 58px; height: 58px; }
+  .ecoNode.is-patient .ecoNodeDot svg { width: 26px; height: 26px; }
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────────── */
+/* Not "animation off and nothing to look at": every connection is drawn live
+   and every step is shown at full opacity, so the whole story is legible at
+   once. This is the same information, delivered statically. */
+
+@media (prefers-reduced-motion: reduce) {
+  .ecoEdge { stroke: var(--eco-live); opacity: .5; }
+  .ecoPulse { display: none; }
+  .ecoEdgeGroup.is-active .ecoPulse { animation: none; }
+  .ecoStep { opacity: 1; }
+  .ecoNode .ecoNodeDot { transform: none; }
+  .ecoControls { display: none; }
+}

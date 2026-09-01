@@ -13,6 +13,7 @@
   <meta property="og:image" content="https://www.trustydr.com/assets/img/logo.png">
   <link rel="icon" href="/assets/img/logo.png">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/ecosystem.css">
 </head>
 <body>
 <a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
@@ -85,6 +86,109 @@
             <span class="muted" style="font-size:13px;">متوفر بالإنجليزية والعربية والكردية.</span>
           </div>
         </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section eco" id="ecosystem">
+  <div class="container">
+    <p class="ecoEyebrow">منظومة TrustyDr</p>
+    <h2 class="sectionTitle">رعاية صحية مترابطة في مكان واحد</h2>
+    <p class="ecoLead">المريض في المركز دائماً. الأطباء والصيدليات والمختبرات يعملون على السجل نفسه، فتنتقل الرعاية دون ملاحقة الأوراق.</p>
+
+    <div class="ecoLayout" data-eco-root>
+      <div class="ecoStage" role="img" aria-label="كيف تنقل شبكة TrustyDr الرعاية بين المريض والطبيب والصيدلية والمختبر.">
+        <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+          <g class="ecoEdgeGroup" data-eco-edge="pd">
+            <path class="ecoEdge" d="M250,159 L250,94" pathLength="100"/>
+            <path class="ecoPulse" d="M250,159 L250,94" pathLength="100"/>
+          </g>
+          <g class="ecoEdgeGroup" data-eco-edge="pph">
+            <path class="ecoEdge" d="M282,226 L384,309" pathLength="100"/>
+            <path class="ecoPulse" d="M282,226 L384,309" pathLength="100"/>
+          </g>
+          <g class="ecoEdgeGroup" data-eco-edge="pl">
+            <path class="ecoEdge" d="M218,226 L116,309" pathLength="100"/>
+            <path class="ecoPulse" d="M218,226 L116,309" pathLength="100"/>
+          </g>
+          <g class="ecoEdgeGroup" data-eco-edge="dph">
+            <path class="ecoEdge" d="M286,72 Q432,128 428,300" pathLength="100"/>
+            <path class="ecoPulse" d="M286,72 Q432,128 428,300" pathLength="100"/>
+          </g>
+          <g class="ecoEdgeGroup" data-eco-edge="dl">
+            <path class="ecoEdge" d="M214,72 Q68,128 72,300" pathLength="100"/>
+            <path class="ecoPulse" d="M214,72 Q68,128 72,300" pathLength="100"/>
+          </g>
+        </svg>
+        <div class="ecoNode is-patient" data-eco-node="patient">
+          <span class="ecoNodeDot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></span>
+          <span class="ecoNodeLabel">المريض</span>
+        </div>
+        <div class="ecoNode is-doctor" data-eco-node="doctor">
+          <span class="ecoNodeDot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v5a4 4 0 0 0 8 0V3"/><path d="M11 15v1a4 4 0 0 0 8 0v-2"/><circle cx="19" cy="12" r="2"/></svg></span>
+          <span class="ecoNodeLabel">الطبيب</span>
+        </div>
+        <div class="ecoNode is-pharmacy" data-eco-node="pharmacy">
+          <span class="ecoNodeDot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8.5" width="13" height="7" rx="3.5" transform="rotate(-45 3 8.5)"/><path d="M8.8 6.2 15 12.4"/><path d="M18 3v6M15 6h6"/></svg></span>
+          <span class="ecoNodeLabel">الصيدلية</span>
+        </div>
+        <div class="ecoNode is-lab" data-eco-node="lab">
+          <span class="ecoNodeDot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3v6.2L4.8 17a2.6 2.6 0 0 0 2.2 4h10a2.6 2.6 0 0 0 2.2-4l-4.7-7.8V3"/><path d="M8 3h8"/><path d="M7.2 14.5h9.6"/></svg></span>
+          <span class="ecoNodeLabel">المختبر</span>
+        </div>
+      </div>
+
+      <div>
+        <ol class="ecoSteps">
+        <li class="ecoStep" data-eco-step data-eco-edge="pd" data-eco-reverse="false" data-eco-nodes="patient doctor" tabindex="0">
+          <span class="ecoStepIndex">1</span>
+          <span>
+            <span class="ecoStepTitle">حجز الموعد</span>
+            <span class="ecoStepText">يحجز المريض موعده مع الطبيب من تطبيق TrustyDr.</span>
+          </span>
+        </li>
+        <li class="ecoStep" data-eco-step data-eco-edge="pd" data-eco-reverse="true" data-eco-nodes="doctor patient" tabindex="0">
+          <span class="ecoStepIndex">2</span>
+          <span>
+            <span class="ecoStepTitle">إصدار الوصفة</span>
+            <span class="ecoStepText">يوثّق الطبيب الزيارة ويصدر الوصفة الطبية للمريض.</span>
+          </span>
+        </li>
+        <li class="ecoStep" data-eco-step data-eco-edge="dph" data-eco-reverse="false" data-eco-nodes="doctor pharmacy" tabindex="0">
+          <span class="ecoStepIndex">3</span>
+          <span>
+            <span class="ecoStepTitle">الإرسال إلى الصيدلية</span>
+            <span class="ecoStepText">تُرسل الوصفة إلى الصيدلية إلكترونياً دون نقل ورقي.</span>
+          </span>
+        </li>
+        <li class="ecoStep" data-eco-step data-eco-edge="pph" data-eco-reverse="true" data-eco-nodes="pharmacy patient" tabindex="0">
+          <span class="ecoStepIndex">4</span>
+          <span>
+            <span class="ecoStepTitle">جاهزة للاستلام</span>
+            <span class="ecoStepText">تجهّز الصيدلية الطلب ويصل المريض إشعار عند الجاهزية.</span>
+          </span>
+        </li>
+        <li class="ecoStep" data-eco-step data-eco-edge="dl" data-eco-reverse="false" data-eco-nodes="doctor lab" tabindex="0">
+          <span class="ecoStepIndex">5</span>
+          <span>
+            <span class="ecoStepTitle">طلب فحص مختبري</span>
+            <span class="ecoStepText">يرسل الطبيب طلب الفحص أو الأشعة مباشرة إلى المزوّد.</span>
+          </span>
+        </li>
+        <li class="ecoStep" data-eco-step data-eco-edge="pl" data-eco-reverse="true" data-eco-nodes="lab patient" tabindex="0">
+          <span class="ecoStepIndex">6</span>
+          <span>
+            <span class="ecoStepTitle">تسليم النتائج</span>
+            <span class="ecoStepText">تُتاح النتائج للمريض وتعود إلى الطبيب.</span>
+          </span>
+        </li>
+        </ol>
+        <div class="ecoControls">
+          <button type="button" class="ecoToggle" data-eco-toggle hidden
+                  aria-pressed="false"
+                  data-label-pause="إيقاف مؤقت" data-label-play="تشغيل">إيقاف مؤقت</button>
+        </div>
       </div>
     </div>
   </div>
@@ -232,5 +336,6 @@
   </div>
 </footer>
 <script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/ecosystem.js" defer></script>
 </body>
 </html>
