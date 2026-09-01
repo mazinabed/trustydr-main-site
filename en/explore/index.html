@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TrustyDr | Explore TrustyDr</title>
-  <meta name="description" content="See the TrustyDr Doctor Portal, Pharmacy Platform and Laboratory Platform before you create an account.">
+  <meta name="description" content="Walk through real screens from the TrustyDr provider platforms before you create an account.">
   <link rel="canonical" href="https://www.trustydr.com/en/explore/">
   <meta property="og:site_name" content="TrustyDr">
   <meta property="og:title" content="TrustyDr | Explore TrustyDr">
-  <meta property="og:description" content="See the TrustyDr Doctor Portal, Pharmacy Platform and Laboratory Platform before you create an account.">
+  <meta property="og:description" content="Walk through real screens from the TrustyDr provider platforms before you create an account.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.trustydr.com/assets/img/logo.png">
   <link rel="icon" href="/assets/img/logo.png">
@@ -73,11 +73,9 @@
   </section>
 
   <div class="container">
-    <h2 class="tourPick">Choose a platform</h2>
-    <div class="tourTabs" role="tablist" aria-label="Choose a platform">
-        <button type="button" class="tourTab is-active" role="tab" id="tab-doctor" aria-controls="panel-doctor" aria-selected="true" data-tour-tab="doctor">Doctor Portal<span class="tourTabNote">Clinic, appointments and prescriptions in one place.</span></button>
-        <button type="button" class="tourTab" role="tab" id="tab-pharmacy" aria-controls="panel-pharmacy" aria-selected="false" data-tour-tab="pharmacy">Pharmacy Platform<span class="tourTabNote">Prescriptions arrive digitally and move through a clear queue.</span></button>
-        <button type="button" class="tourTab" role="tab" id="tab-laboratory" aria-controls="panel-laboratory" aria-selected="false" data-tour-tab="laboratory">Laboratory Platform<span class="tourTabNote">Requests in, results out — connected to the referring doctor.</span></button>
+    <div class="tourSingleHead">
+      <h2 class="tourSingleName" data-tour-track-name>Doctor Portal</h2>
+      <p class="tourSingleNote">Clinic, appointments and prescriptions in one place.</p>
     </div>
 
       <section class="tourPanel is-active" role="tabpanel" id="panel-doctor" aria-labelledby="tab-doctor" data-tour-panel="doctor">
@@ -88,7 +86,10 @@
             <h3 class="tourStepTitle">Your practice home</h3>
           </div>
           <p class="tourStepText">Verification and subscription status at the top, with direct access to your schedule, appointments, patient QR code and clinic.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-01-dashboard.png" alt="Doctor Portal — Your practice home" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-01-dashboard.png" aria-label="View full size: Doctor Portal — Your practice home">
+            <img class="tourShot" src="/assets/img/tour/doctor-01-dashboard.png" alt="Doctor Portal — Your practice home" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
@@ -96,7 +97,10 @@
             <h3 class="tourStepTitle">Schedule and availability</h3>
           </div>
           <p class="tourStepText">Build a weekly pattern of shifts that repeat. Only the times you activate are offered to patients.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-02-schedule.png" alt="Doctor Portal — Schedule and availability" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-02-schedule.png" aria-label="View full size: Doctor Portal — Schedule and availability">
+            <img class="tourShot" src="/assets/img/tour/doctor-02-schedule.png" alt="Doctor Portal — Schedule and availability" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
@@ -104,211 +108,43 @@
             <h3 class="tourStepTitle">Reception board</h3>
           </div>
           <p class="tourStepText">The live queue — waiting, in progress and completed — with walk-ins added alongside booked appointments.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-03-reception.png" alt="Doctor Portal — Reception board" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-03-reception.png" aria-label="View full size: Doctor Portal — Reception board">
+            <img class="tourShot" src="/assets/img/tour/doctor-03-reception.png" alt="Doctor Portal — Reception board" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">Step 4</span>
-            <h3 class="tourStepTitle">Prescription composer</h3>
-          </div>
-          <p class="tourStepText">Write a prescription from a standardised medication catalogue, with directions in the patient’s language.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 5</span>
             <h3 class="tourStepTitle">Medication library</h3>
           </div>
           <p class="tourStepText">Your centre’s own list of medications, drawn from the TrustyDr catalogue, with favourites and reusable prescription sets beside it. Medication names are standardised and never translated.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="Doctor Portal — Medication library" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-medications.png" aria-label="View full size: Doctor Portal — Medication library">
+            <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="Doctor Portal — Medication library" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
-            <span class="tourStepNum">Step 6</span>
+            <span class="tourStepNum">Step 5</span>
             <h3 class="tourStepTitle">Practice insights</h3>
           </div>
           <p class="tourStepText">Appointments, completed visits, no-shows, cancellations and revenue — for the day, the week or the month.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="Doctor Portal — Practice insights" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-insights.png" aria-label="View full size: Doctor Portal — Practice insights">
+            <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="Doctor Portal — Practice insights" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
-            <span class="tourStepNum">Step 7</span>
+            <span class="tourStepNum">Step 6</span>
             <h3 class="tourStepTitle">Your patient QR code</h3>
           </div>
           <p class="tourStepText">A QR code for your public profile. Put it on the reception desk and patients can view your profile and book an appointment.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="Doctor Portal — Your patient QR code" loading="lazy" decoding="async">
-        </li>
-        </ol>
-        <div class="tourCta">
-          <h2 class="tourCtaTitle">Ready to join TrustyDr?</h2>
-          <p class="tourCtaText">Create your account and start connecting with patients, pharmacies and laboratories.</p>
-          <div class="tourCtaRow">
-            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Create account</a>
-            <a class="btn ghost" href="/en/contact/">Talk to us</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="tourPanel" role="tabpanel" id="panel-pharmacy" aria-labelledby="tab-pharmacy" data-tour-panel="pharmacy" hidden>
-        <ol class="tourSteps">
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 1</span>
-            <h3 class="tourStepTitle">Pharmacy dashboard</h3>
-          </div>
-          <p class="tourStepText">What needs attention today across prescriptions, orders and your store.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 2</span>
-            <h3 class="tourStepTitle">Incoming prescriptions</h3>
-          </div>
-          <p class="tourStepText">Prescriptions sent by doctors arrive here directly — nothing is carried in by hand.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 3</span>
-            <h3 class="tourStepTitle">Prepare and dispense</h3>
-          </div>
-          <p class="tourStepText">Work an order through received, preparing, ready and dispensed — the patient is notified at each step.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 4</span>
-            <h3 class="tourStepTitle">Services</h3>
-          </div>
-          <p class="tourStepText">Publish what your pharmacy offers so doctors and patients can find you.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 5</span>
-            <h3 class="tourStepTitle">Store and products</h3>
-          </div>
-          <p class="tourStepText">Manage your product catalogue and keep your online store current.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 6</span>
-            <h3 class="tourStepTitle">Orders and picking</h3>
-          </div>
-          <p class="tourStepText">Pick, pack and fulfil customer orders from one working screen.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 7</span>
-            <h3 class="tourStepTitle">Subscription and billing</h3>
-          </div>
-          <p class="tourStepText">Your plan, renewal date and payment history in one place.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        </ol>
-        <div class="tourCta">
-          <h2 class="tourCtaTitle">Ready to join TrustyDr?</h2>
-          <p class="tourCtaText">Create your account and start connecting with patients, pharmacies and laboratories.</p>
-          <div class="tourCtaRow">
-            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Create account</a>
-            <a class="btn ghost" href="/en/contact/">Talk to us</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="tourPanel" role="tabpanel" id="panel-laboratory" aria-labelledby="tab-laboratory" data-tour-panel="laboratory" hidden>
-        <ol class="tourSteps">
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 1</span>
-            <h3 class="tourStepTitle">Incoming requests</h3>
-          </div>
-          <p class="tourStepText">Test and imaging requests arrive from doctors with the clinical context already attached.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 2</span>
-            <h3 class="tourStepTitle">Service catalogue</h3>
-          </div>
-          <p class="tourStepText">List the tests and imaging you offer, with the ones patients can book online.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 3</span>
-            <h3 class="tourStepTitle">Patient check-in</h3>
-          </div>
-          <p class="tourStepText">Move a request from received to checked-in to completed as the patient is seen.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 4</span>
-            <h3 class="tourStepTitle">Results and reports</h3>
-          </div>
-          <p class="tourStepText">Attach the report and release it — the patient and the referring doctor both receive it.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 5</span>
-            <h3 class="tourStepTitle">Facility profile</h3>
-          </div>
-          <p class="tourStepText">Your address, hours and contact details, shown to doctors and patients choosing a laboratory.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">Step 6</span>
-            <h3 class="tourStepTitle">Subscription and billing</h3>
-          </div>
-          <p class="tourStepText">Your plan, renewal date and payment history in one place.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="Screenshot coming soon">
-            <span class="tourPlaceholderTitle">Screenshot coming soon</span>
-            <span class="tourPlaceholderNote">This screen exists in the product; we are preparing the capture.</span>
-          </div>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-qr.png" aria-label="View full size: Doctor Portal — Your patient QR code">
+            <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="Doctor Portal — Your patient QR code" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
         </li>
         </ol>
         <div class="tourCta">
@@ -322,6 +158,15 @@
       </section>
   </div>
 </main>
+
+<div class="tourLightbox" data-tour-lightbox hidden>
+  <div class="tourLightboxInner" role="dialog" aria-modal="true" aria-label="View full size">
+    <button type="button" class="tourLightboxClose" data-tour-lightbox-close
+            aria-label="Close">&times;</button>
+    <img class="tourLightboxImg" data-tour-lightbox-img src="" alt="">
+    <p class="tourLightboxCaption" data-tour-lightbox-caption></p>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">

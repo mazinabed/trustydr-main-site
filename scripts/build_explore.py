@@ -47,30 +47,54 @@ def chrome(lang):
 
 
 def step_media(step, labels):
-    """A real screenshot, or an honestly-labelled placeholder.
+    """The screenshot, wrapped in a control that opens it full size.
 
-    Never a fabricated dashboard: an invented screenshot in a product tour is a
-    promise we would have to keep.
+    There is no placeholder branch. A step without an approved capture is
+    filtered out before it reaches here (see `visible_steps`), because a
+    placeholder card on a public page advertises an unfinished product - and
+    fabricating the missing screen is not an alternative.
     """
-    if step.get('image'):
-        return (
-            '<img class="tourShot" src="/assets/img/tour/%s" alt="%s" '
-            'loading="lazy" decoding="async">' % (step['image'], step['_alt'])
-        )
     return (
-        '<div class="tourShot tourShot--placeholder" role="img" aria-label="%s">\n'
-        '            <span class="tourPlaceholderTitle">%s</span>\n'
-        '            <span class="tourPlaceholderNote">%s</span>\n'
-        '          </div>' % (labels['placeholder'], labels['placeholder'],
-                              labels['placeholder_note'])
+        '<button type="button" class="tourShotBtn" data-tour-zoom '
+        'data-tour-full="/assets/img/tour/%s" aria-label="%s: %s">\n'
+        '            <img class="tourShot" src="/assets/img/tour/%s" alt="%s" '
+        'loading="lazy" decoding="async">\n'
+        '            <span class="tourZoomHint" aria-hidden="true">%s</span>\n'
+        '          </button>'
+        % (step['image'], labels['enlarge'], step['_alt'],
+           step['image'], step['_alt'], labels['enlarge'])
     )
+
+
+def visible_steps(track):
+    """Only steps with an approved screenshot are published.
+
+    content/tour.json keeps the planned steps so the roadmap stays in one
+    place; this is the gate that stops them reaching the public page.
+    """
+    return [s for s in track['steps'] if s.get('image')]
+
+
+def visible_tracks(data):
+    """Only tracks that have something real to show.
+
+    A platform with no captures is hidden entirely rather than published as an
+    empty or "coming soon" tour: a prospective provider should never be shown a
+    tour that makes the product look unfinished.
+    """
+    return [t for t in data['tracks'] if visible_steps(t)]
 
 
 def build(lang, data):
     labels = data['labels'][lang]
     header, footer, scripts = chrome(lang)
     rtl = lang in ('ar', 'ku')
-    tracks = data['tracks']
+    tracks = visible_tracks(data)
+    if not tracks:
+        raise SystemExit(
+            'Refusing to generate: no track has an approved screenshot. '
+            'An Explore page with nothing real on it must not be published.')
+    single = len(tracks) == 1
 
     tabs = '\n'.join(
         '        <button type="button" class="tourTab%s" role="tab" '
@@ -84,7 +108,7 @@ def build(lang, data):
     panels = []
     for i, t in enumerate(tracks):
         steps = []
-        for n, step in enumerate(t['steps'], start=1):
+        for n, step in enumerate(visible_steps(t), start=1):
             step = dict(step)
             step['_alt'] = '%s — %s' % (t['name'][lang], step['title'][lang])
             steps.append(
@@ -113,7 +137,7 @@ def build(lang, data):
             '        </div>\n'
             '      </section>'
             % (' is-active' if i == 0 else '', t['id'], t['id'], t['id'],
-               '' if i == 0 else ' hidden', '\n'.join(steps),
+               '' if (i == 0 or single) else ' hidden', '\n'.join(steps),
                labels['cta_title'], labels['cta_text'],
                t['cta_url'], labels['cta_primary'], lang, labels['cta_secondary']))
 
@@ -150,14 +174,19 @@ def build(lang, data):
   </section>
 
   <div class="container">
-    <h2 class="tourPick">%(pick)s</h2>
-    <div class="tourTabs" role="tablist" aria-label="%(pick)s">
-%(tabs)s
-    </div>
-
+%(picker)s
 %(panels)s
   </div>
 </main>
+
+<div class="tourLightbox" data-tour-lightbox hidden>
+  <div class="tourLightboxInner" role="dialog" aria-modal="true" aria-label="%(enlarge)s">
+    <button type="button" class="tourLightboxClose" data-tour-lightbox-close
+            aria-label="%(close)s">&times;</button>
+    <img class="tourLightboxImg" data-tour-lightbox-img src="" alt="">
+    <p class="tourLightboxCaption" data-tour-lightbox-caption></p>
+  </div>
+</div>
 
 %(footer)s
 
@@ -173,12 +202,24 @@ def build(lang, data):
         'eyebrow': labels['eyebrow'],
         'title': labels['title'],
         'lead': labels['lead'],
-        'pick': labels['pick'],
+        # With one track the tablist is noise, but the platform still has to
+        # be named or the visitor cannot tell what they are looking at.
+        'picker': (
+            '    <div class="tourSingleHead">\n'
+            '      <h2 class="tourSingleName" data-tour-track-name>%s</h2>\n'
+            '      <p class="tourSingleNote">%s</p>\n'
+            '    </div>\n'
+            % (tracks[0]['name'][lang], tracks[0]['tagline'][lang])
+        ) if single else (
+            '    <h2 class="tourPick">%s</h2>\n'
+            '    <div class="tourTabs" role="tablist" aria-label="%s">\n%s\n    </div>\n'
+            % (labels['pick'], labels['pick'], tabs)),
         'header': header,
         'footer': footer,
-        'tabs': tabs,
         'panels': '\n\n'.join(panels),
         'scripts': script_tags,
+        'enlarge': labels['enlarge'],
+        'close': labels['close'],
     }
 
 
@@ -192,10 +233,18 @@ def main():
         io.open(path, 'w', encoding='utf-8', newline='\n').write(build(lang, data))
         print('wrote', os.path.relpath(path, ROOT))
 
-    missing = sum(1 for t in data['tracks'] for s in t['steps'] if not s.get('image'))
-    total = sum(len(t['steps']) for t in data['tracks'])
-    print('\n%d/%d steps still using placeholders.' % (missing, total))
-    if missing:
+    shown = visible_tracks(data)
+    print('\nPublished: %d track(s), %d step(s) - all with real screenshots.'
+          % (len(shown), sum(len(visible_steps(t)) for t in shown)))
+
+    hidden_tracks = [t['id'] for t in data['tracks'] if not visible_steps(t)]
+    if hidden_tracks:
+        print('Hidden (no approved screenshots yet): %s' % ', '.join(hidden_tracks))
+    pending = [(t['id'], s['id']) for t in data['tracks']
+               for s in t['steps'] if not s.get('image')]
+    if pending:
+        print('Planned but not published (%d): %s'
+              % (len(pending), ', '.join('%s/%s' % p for p in pending)))
         print('Drop real captures into assets/img/tour/ and set "image" in '
               'content/tour.json, then re-run this script.')
 

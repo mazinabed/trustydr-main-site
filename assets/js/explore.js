@@ -13,7 +13,13 @@
   function init() {
     var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-tour-tab]'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('[data-tour-panel]'));
-    if (!tabs.length || !panels.length) return;
+
+    // The picker is omitted when only one platform has published screenshots,
+    // so the lightbox has to be wired up regardless of whether tabs exist.
+    if (!tabs.length || !panels.length) {
+      initLightbox();
+      return;
+    }
 
     function select(id, focus) {
       tabs.forEach(function (tab) {
@@ -61,6 +67,8 @@
       });
     });
 
+    initLightbox();
+
     // Allow /explore/#pharmacy to open on that track — used by the links from
     // the portal's login page and anywhere else that wants to point at one
     // platform in particular.
@@ -68,6 +76,71 @@
     if (hash && tabs.some(function (t) { return t.getAttribute('data-tour-tab') === hash; })) {
       select(hash, false);
     }
+  }
+
+  /// Click / tap a screenshot to see it full size.
+  ///
+  /// The captures are desktop-width UI, so at phone widths the inline image is
+  /// legible as a shape but not as a screen. This is the difference between
+  /// "there is a dashboard" and "I can see what the dashboard does".
+  function initLightbox() {
+    var box = document.querySelector('[data-tour-lightbox]');
+    if (!box) return;
+
+    var img = box.querySelector('[data-tour-lightbox-img]');
+    var caption = box.querySelector('[data-tour-lightbox-caption]');
+    var closeBtn = box.querySelector('[data-tour-lightbox-close]');
+    var opener = null;
+
+    function open(trigger) {
+      var full = trigger.getAttribute('data-tour-full');
+      var thumb = trigger.querySelector('img');
+      if (!full) return;
+
+      opener = trigger;
+      img.setAttribute('src', full);
+      img.setAttribute('alt', thumb ? thumb.getAttribute('alt') || '' : '');
+      caption.textContent = thumb ? thumb.getAttribute('alt') || '' : '';
+      box.hidden = false;
+      document.body.classList.add('tourLightboxOpen');
+      closeBtn.focus();
+    }
+
+    function close() {
+      box.hidden = true;
+      document.body.classList.remove('tourLightboxOpen');
+      img.setAttribute('src', '');
+      // Return focus where it came from, or the keyboard user is dumped at the
+      // top of the document.
+      if (opener) { opener.focus(); opener = null; }
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('[data-tour-zoom]'))
+      .forEach(function (trigger) {
+        trigger.addEventListener('click', function () { open(trigger); });
+      });
+
+    closeBtn.addEventListener('click', close);
+
+    // Clicking the backdrop closes; clicking the image itself must not.
+    box.addEventListener('click', function (ev) {
+      if (ev.target === box) close();
+    });
+
+    document.addEventListener('keydown', function (ev) {
+      if (box.hidden) return;
+      if (ev.key === 'Escape') {
+        ev.preventDefault();
+        close();
+        return;
+      }
+      // Keep focus inside the dialog: the close button is the only stop, so
+      // Tab simply returns to it rather than escaping to the page behind.
+      if (ev.key === 'Tab') {
+        ev.preventDefault();
+        closeBtn.focus();
+      }
+    });
   }
 
   if (document.readyState === 'loading') {

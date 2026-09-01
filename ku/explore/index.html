@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TrustyDr | TrustyDr بگەڕێ</title>
-  <meta name="description" content="پێش دروستکردنی هەژمار، پۆرتاڵی پزیشک و پلاتفۆرمی دەرمانخانە و تاقیگەی TrustyDr ببینە.">
+  <meta name="description" content="پێش دروستکردنی هەژمار، شاشە ڕاستەقینەکانی پلاتفۆرمەکانی TrustyDr ببینە.">
   <link rel="canonical" href="https://www.trustydr.com/ku/explore/">
   <meta property="og:site_name" content="TrustyDr">
   <meta property="og:title" content="TrustyDr | TrustyDr بگەڕێ">
-  <meta property="og:description" content="پێش دروستکردنی هەژمار، پۆرتاڵی پزیشک و پلاتفۆرمی دەرمانخانە و تاقیگەی TrustyDr ببینە.">
+  <meta property="og:description" content="پێش دروستکردنی هەژمار، شاشە ڕاستەقینەکانی پلاتفۆرمەکانی TrustyDr ببینە.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.trustydr.com/assets/img/logo.png">
   <link rel="icon" href="/assets/img/logo.png">
@@ -73,11 +73,9 @@
   </section>
 
   <div class="container">
-    <h2 class="tourPick">پلاتفۆرمێک هەڵبژێرە</h2>
-    <div class="tourTabs" role="tablist" aria-label="پلاتفۆرمێک هەڵبژێرە">
-        <button type="button" class="tourTab is-active" role="tab" id="tab-doctor" aria-controls="panel-doctor" aria-selected="true" data-tour-tab="doctor">پۆرتاڵی پزیشک<span class="tourTabNote">کلینیک و کاتی ژووان و نوسخە لە یەک شوێندا.</span></button>
-        <button type="button" class="tourTab" role="tab" id="tab-pharmacy" aria-controls="panel-pharmacy" aria-selected="false" data-tour-tab="pharmacy">پلاتفۆرمی دەرمانخانە<span class="tourTabNote">نوسخەکان بە دیجیتاڵی دێن و بە ڕیزێکی ڕوون دەڕۆن.</span></button>
-        <button type="button" class="tourTab" role="tab" id="tab-laboratory" aria-controls="panel-laboratory" aria-selected="false" data-tour-tab="laboratory">پلاتفۆرمی تاقیگە<span class="tourTabNote">داواکاری دێت و ئەنجام دەردەچێت — پەیوەست بە پزیشکی ناردوو.</span></button>
+    <div class="tourSingleHead">
+      <h2 class="tourSingleName" data-tour-track-name>پۆرتاڵی پزیشک</h2>
+      <p class="tourSingleNote">کلینیک و کاتی ژووان و نوسخە لە یەک شوێندا.</p>
     </div>
 
       <section class="tourPanel is-active" role="tabpanel" id="panel-doctor" aria-labelledby="tab-doctor" data-tour-panel="doctor">
@@ -88,7 +86,10 @@
             <h3 class="tourStepTitle">پەڕەی سەرەکیت</h3>
           </div>
           <p class="tourStepText">دۆخی پشتڕاستکردنەوە و بەشداری لە سەرەوە، لەگەڵ دەستگەیشتنی ڕاستەوخۆ بۆ خشتە و کاتەکانی ژووان و کۆدی QR و کلینیکەکەت.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-01-dashboard.png" alt="پۆرتاڵی پزیشک — پەڕەی سەرەکیت" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-01-dashboard.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — پەڕەی سەرەکیت">
+            <img class="tourShot" src="/assets/img/tour/doctor-01-dashboard.png" alt="پۆرتاڵی پزیشک — پەڕەی سەرەکیت" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
@@ -96,7 +97,10 @@
             <h3 class="tourStepTitle">خشتە و کاتی بەردەست</h3>
           </div>
           <p class="tourStepText">خشتەیەکی هەفتانەی دووبارەبووەوە دروست بکە. تەنها ئەو کاتانەی چالاکیان دەکەیت بۆ نەخۆش پیشان دەدرێن.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-02-schedule.png" alt="پۆرتاڵی پزیشک — خشتە و کاتی بەردەست" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-02-schedule.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — خشتە و کاتی بەردەست">
+            <img class="tourShot" src="/assets/img/tour/doctor-02-schedule.png" alt="پۆرتاڵی پزیشک — خشتە و کاتی بەردەست" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
@@ -104,211 +108,43 @@
             <h3 class="tourStepTitle">تەختەی پێشوازی</h3>
           </div>
           <p class="tourStepText">ڕیزی ڕاستەوخۆ — چاوەڕوان، لە کاردا و تەواوبوو — لەگەڵ زیادکردنی ئەوانەی بێ کاتی ژووان دێن.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-03-reception.png" alt="پۆرتاڵی پزیشک — تەختەی پێشوازی" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-03-reception.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — تەختەی پێشوازی">
+            <img class="tourShot" src="/assets/img/tour/doctor-03-reception.png" alt="پۆرتاڵی پزیشک — تەختەی پێشوازی" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">هەنگاو 4</span>
-            <h3 class="tourStepTitle">دروستکەری نوسخە</h3>
-          </div>
-          <p class="tourStepText">نوسخە لە کەتەلۆگی دەرمانی ستاندارد بنووسە، بە ڕێنمایی بە زمانی نەخۆش.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 5</span>
             <h3 class="tourStepTitle">کتێبخانەی دەرمان</h3>
           </div>
           <p class="tourStepText">لیستی دەرمانی ناوەندەکەت، لە کەتەلۆگی TrustyDr، لەگەڵ دڵخوازەکان و کۆمەڵە نوسخە دووبارە بەکاردێنراوەکان. ناوی دەرمان ستانداردە و وەرناگێڕدرێت.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="پۆرتاڵی پزیشک — کتێبخانەی دەرمان" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-medications.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کتێبخانەی دەرمان">
+            <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="پۆرتاڵی پزیشک — کتێبخانەی دەرمان" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 6</span>
+            <span class="tourStepNum">هەنگاو 5</span>
             <h3 class="tourStepTitle">پێوەرەکانی کارایی</h3>
           </div>
           <p class="tourStepText">کاتەکانی ژووان، سەردانە تەواوبووەکان، نەهاتووەکان، هەڵوەشاوەکان و داهات — بۆ ڕۆژ، هەفتە یان مانگ.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="پۆرتاڵی پزیشک — پێوەرەکانی کارایی" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-insights.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — پێوەرەکانی کارایی">
+            <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="پۆرتاڵی پزیشک — پێوەرەکانی کارایی" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 7</span>
+            <span class="tourStepNum">هەنگاو 6</span>
             <h3 class="tourStepTitle">کۆدی QR ـی تۆ</h3>
           </div>
           <p class="tourStepText">کۆدی QR بۆ پرۆفایلی گشتیت. لە پێشوازی دایبنێ تا نەخۆش بتوانێت پرۆفایلەکەت ببینێت و کاتی ژووان بگرێت.</p>
-          <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="پۆرتاڵی پزیشک — کۆدی QR ـی تۆ" loading="lazy" decoding="async">
-        </li>
-        </ol>
-        <div class="tourCta">
-          <h2 class="tourCtaTitle">ئامادەیت بۆ بەشداری TrustyDr؟</h2>
-          <p class="tourCtaText">هەژمارەکەت دروست بکە و دەست بکە بە پەیوەندی لەگەڵ نەخۆش و دەرمانخانە و تاقیگە.</p>
-          <div class="tourCtaRow">
-            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">دروستکردنی هەژمار</a>
-            <a class="btn ghost" href="/ku/contact/">پەیوەندیمان پێوە بکە</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="tourPanel" role="tabpanel" id="panel-pharmacy" aria-labelledby="tab-pharmacy" data-tour-panel="pharmacy" hidden>
-        <ol class="tourSteps">
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 1</span>
-            <h3 class="tourStepTitle">داشبۆردی دەرمانخانە</h3>
-          </div>
-          <p class="tourStepText">ئەوەی ئەمڕۆ پێویستی بە سەرنجە لە نوسخە و داواکاری و فرۆشگاکەت.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 2</span>
-            <h3 class="tourStepTitle">نوسخە هاتووەکان</h3>
-          </div>
-          <p class="tourStepText">ئەو نوسخانەی پزیشکان دەینێرن ڕاستەوخۆ لێرە دێن — هیچ بە دەست ناهێنرێت.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 3</span>
-            <h3 class="tourStepTitle">ئامادەکردن و دابەشکردن</h3>
-          </div>
-          <p class="tourStepText">داواکارییەکە ببە بە وەرگیراو، ئامادەکردن، ئامادە و دابەشکراودا — نەخۆش لە هەر هەنگاوێک ئاگادار دەکرێتەوە.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 4</span>
-            <h3 class="tourStepTitle">خزمەتگوزارییەکان</h3>
-          </div>
-          <p class="tourStepText">ئەوەی دەرمانخانەکەت پێشکەشی دەکات بڵاو بکەرەوە تا پزیشک و نەخۆش بتدۆزنەوە.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 5</span>
-            <h3 class="tourStepTitle">فرۆشگا و بەرهەمەکان</h3>
-          </div>
-          <p class="tourStepText">کەتەلۆگی بەرهەمەکانت بەڕێوە ببە و فرۆشگا ئۆنلاینەکەت نوێ ڕابگرە.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 6</span>
-            <h3 class="tourStepTitle">داواکاری و کۆکردنەوە</h3>
-          </div>
-          <p class="tourStepText">داواکاری کڕیاران لە یەک شاشەدا کۆبکەرەوە و پێچە و جێبەجێ بکە.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 7</span>
-            <h3 class="tourStepTitle">بەشداری و پارەدان</h3>
-          </div>
-          <p class="tourStepText">پلانەکەت، بەرواری نوێکردنەوە و مێژووی پارەدان لە یەک شوێندا.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        </ol>
-        <div class="tourCta">
-          <h2 class="tourCtaTitle">ئامادەیت بۆ بەشداری TrustyDr؟</h2>
-          <p class="tourCtaText">هەژمارەکەت دروست بکە و دەست بکە بە پەیوەندی لەگەڵ نەخۆش و دەرمانخانە و تاقیگە.</p>
-          <div class="tourCtaRow">
-            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">دروستکردنی هەژمار</a>
-            <a class="btn ghost" href="/ku/contact/">پەیوەندیمان پێوە بکە</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="tourPanel" role="tabpanel" id="panel-laboratory" aria-labelledby="tab-laboratory" data-tour-panel="laboratory" hidden>
-        <ol class="tourSteps">
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 1</span>
-            <h3 class="tourStepTitle">داواکارییە هاتووەکان</h3>
-          </div>
-          <p class="tourStepText">داواکاری پشکنین و وێنەگرتن لە پزیشکانەوە دێن لەگەڵ زانیاری کلینیکی.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 2</span>
-            <h3 class="tourStepTitle">کەتەلۆگی خزمەتگوزاری</h3>
-          </div>
-          <p class="tourStepText">ئەو پشکنین و وێنەگرتنانە دابنێ کە پێشکەشی دەکەیت، لەگەڵ ئەوانەی نەخۆش دەتوانێت ئۆنلاین حجز بکات.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 3</span>
-            <h3 class="tourStepTitle">پێشوازی نەخۆش</h3>
-          </div>
-          <p class="tourStepText">داواکارییەکە لە وەرگیراوەوە بۆ هاتوو و پاشان تەواوبوو بگوازەوە.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 4</span>
-            <h3 class="tourStepTitle">ئەنجام و ڕاپۆرتەکان</h3>
-          </div>
-          <p class="tourStepText">ڕاپۆرتەکە هاوپێچ بکە و بڵاوی بکەرەوە — نەخۆش و پزیشکی ناردوو هەردووکیان وەریدەگرن.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 5</span>
-            <h3 class="tourStepTitle">پرۆفایلی دامەزراوە</h3>
-          </div>
-          <p class="tourStepText">ناونیشان و کاتەکان و زانیاری پەیوەندی، بۆ پزیشک و نەخۆش پیشان دەدرێت.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
-        </li>
-        <li class="tourStep">
-          <div class="tourStepHead">
-            <span class="tourStepNum">هەنگاو 6</span>
-            <h3 class="tourStepTitle">بەشداری و پارەدان</h3>
-          </div>
-          <p class="tourStepText">پلانەکەت، بەرواری نوێکردنەوە و مێژووی پارەدان لە یەک شوێندا.</p>
-          <div class="tourShot tourShot--placeholder" role="img" aria-label="وێنە بەم زووانە">
-            <span class="tourPlaceholderTitle">وێنە بەم زووانە</span>
-            <span class="tourPlaceholderNote">ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.</span>
-          </div>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-qr.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کۆدی QR ـی تۆ">
+            <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="پۆرتاڵی پزیشک — کۆدی QR ـی تۆ" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
         </li>
         </ol>
         <div class="tourCta">
@@ -322,6 +158,15 @@
       </section>
   </div>
 </main>
+
+<div class="tourLightbox" data-tour-lightbox hidden>
+  <div class="tourLightboxInner" role="dialog" aria-modal="true" aria-label="بە قەبارەی تەواو ببینە">
+    <button type="button" class="tourLightboxClose" data-tour-lightbox-close
+            aria-label="داخستن">&times;</button>
+    <img class="tourLightboxImg" data-tour-lightbox-img src="" alt="">
+    <p class="tourLightboxCaption" data-tour-lightbox-caption></p>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
