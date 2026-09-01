@@ -223,6 +223,15 @@
 .ecoStepTitle { font-weight: 700; font-size: 14px; color: var(--text); }
 .ecoStepText  { font-size: 13px; color: var(--muted); margin-top: 2px; }
 
+.ecoCta {
+  display: inline-block;
+  background: var(--g2);
+  color: #fff;
+  margin-top: 18px;
+}
+
+.ecoCtaNote { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+
 .ecoControls { display: flex; gap: 10px; align-items: center; margin-top: 14px; }
 
 .ecoToggle {

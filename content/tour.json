@@ -1,0 +1,297 @@
+{
+  "_readme": [
+    "Content model for the public Explore TrustyDr product tour.",
+    "",
+    "This file is the ONLY place tour content lives. To add, reorder or replace a",
+    "step: edit it here, drop the image into assets/img/tour/, then run",
+    "  python scripts/build_explore.py",
+    "which regenerates en|ar|ku/explore/index.html. The page layout never has to",
+    "be touched, and the generated HTML stays static and indexable rather than",
+    "being assembled by fetch() at runtime.",
+    "",
+    "'image' is a filename under /assets/img/tour/. Leave it null and the step",
+    "renders a clearly-labelled placeholder — never a fabricated screenshot.",
+    "",
+    "Every step below names a screen that EXISTS in the shipped applications.",
+    "Do not add a step for something we do not have."
+  ],
+
+  "labels": {
+    "en": {
+      "page_title": "Explore TrustyDr",
+      "meta_description": "See the TrustyDr Doctor Portal, Pharmacy Platform and Laboratory Platform before you create an account.",
+      "eyebrow": "Explore TrustyDr",
+      "title": "See the platform before you register",
+      "lead": "Real screens from the applications your team will use every day. No account needed.",
+      "pick": "Choose a platform",
+      "placeholder": "Screenshot coming soon",
+      "placeholder_note": "This screen exists in the product; we are preparing the capture.",
+      "step_of": "Step",
+      "cta_title": "Ready to join TrustyDr?",
+      "cta_text": "Create your account and start connecting with patients, pharmacies and laboratories.",
+      "cta_primary": "Create account",
+      "cta_secondary": "Talk to us",
+      "back_home": "Back to home"
+    },
+    "ar": {
+      "page_title": "استكشف تراستي دكتور",
+      "meta_description": "شاهد بوابة الأطباء ومنصة الصيدليات ومنصة المختبرات في TrustyDr قبل إنشاء حساب.",
+      "eyebrow": "استكشف تراستي دكتور",
+      "title": "شاهد المنصة قبل التسجيل",
+      "lead": "شاشات حقيقية من التطبيقات التي سيستخدمها فريقك يومياً. لا حاجة إلى حساب.",
+      "pick": "اختر المنصة",
+      "placeholder": "الصورة قيد التحضير",
+      "placeholder_note": "هذه الشاشة موجودة فعلياً في المنتج، ونعمل على تصويرها.",
+      "step_of": "الخطوة",
+      "cta_title": "جاهز للانضمام إلى TrustyDr؟",
+      "cta_text": "أنشئ حسابك وابدأ التواصل مع المرضى والصيدليات والمختبرات.",
+      "cta_primary": "إنشاء حساب",
+      "cta_secondary": "تواصل معنا",
+      "back_home": "العودة إلى الرئيسية"
+    },
+    "ku": {
+      "page_title": "TrustyDr بگەڕێ",
+      "meta_description": "پێش دروستکردنی هەژمار، پۆرتاڵی پزیشک و پلاتفۆرمی دەرمانخانە و تاقیگەی TrustyDr ببینە.",
+      "eyebrow": "TrustyDr بگەڕێ",
+      "title": "پێش تۆمارکردن پلاتفۆرمەکە ببینە",
+      "lead": "شاشەی ڕاستەقینە لەو ئەپانەی تیمەکەت ڕۆژانە بەکاریان دەهێنێت. پێویست بە هەژمار ناکات.",
+      "pick": "پلاتفۆرمێک هەڵبژێرە",
+      "placeholder": "وێنە بەم زووانە",
+      "placeholder_note": "ئەم شاشەیە لە بەرهەمەکەدا هەیە؛ خەریکی ئامادەکردنی وێنەکەین.",
+      "step_of": "هەنگاو",
+      "cta_title": "ئامادەیت بۆ بەشداری TrustyDr؟",
+      "cta_text": "هەژمارەکەت دروست بکە و دەست بکە بە پەیوەندی لەگەڵ نەخۆش و دەرمانخانە و تاقیگە.",
+      "cta_primary": "دروستکردنی هەژمار",
+      "cta_secondary": "پەیوەندیمان پێوە بکە",
+      "back_home": "گەڕانەوە بۆ سەرەکی"
+    }
+  },
+
+  "tracks": [
+    {
+      "id": "doctor",
+      "cta_url": "https://doctor.trustydr.com",
+      "name": { "en": "Doctor Portal", "ar": "بوابة الأطباء", "ku": "پۆرتاڵی پزیشک" },
+      "tagline": {
+        "en": "Clinic, appointments and prescriptions in one place.",
+        "ar": "العيادة والمواعيد والوصفات في مكان واحد.",
+        "ku": "کلینیک و کاتی ژووان و نوسخە لە یەک شوێندا."
+      },
+      "steps": [
+        {
+          "id": "dashboard", "image": null,
+          "title": { "en": "Centre dashboard", "ar": "لوحة المركز", "ku": "داشبۆردی ناوەند" },
+          "text": {
+            "en": "Today at a glance — appointments, clinical tasks waiting on you, and the state of your centre.",
+            "ar": "يومك في لمحة — المواعيد والمهام السريرية التي تنتظرك وحالة مركزك.",
+            "ku": "ئەمڕۆ بە یەک تێڕوانین — کاتی ژووان، ئەرکە کلینیکییەکان و دۆخی ناوەندەکەت."
+          }
+        },
+        {
+          "id": "appointments", "image": null,
+          "title": { "en": "Appointments", "ar": "المواعيد", "ku": "کاتەکانی ژووان" },
+          "text": {
+            "en": "Every booking with its status, so reception and the doctor are looking at the same list.",
+            "ar": "كل حجز مع حالته، ليطّلع الاستقبال والطبيب على القائمة نفسها.",
+            "ku": "هەموو حجزێک لەگەڵ دۆخەکەی، بۆ ئەوەی پێشوازی و پزیشک هەمان لیست ببینن."
+          }
+        },
+        {
+          "id": "reception", "image": null,
+          "title": { "en": "Reception board", "ar": "لوحة الاستقبال", "ku": "تەختەی پێشوازی" },
+          "text": {
+            "en": "The live queue: who has arrived, who is with the doctor, who is done.",
+            "ar": "الطابور المباشر: من وصل، ومن مع الطبيب، ومن انتهى.",
+            "ku": "ڕیزی ڕاستەوخۆ: کێ گەیشتووە، کێ لەگەڵ پزیشکە، کێ تەواو بووە."
+          }
+        },
+        {
+          "id": "schedule", "image": null,
+          "title": { "en": "Schedule and availability", "ar": "الجدول والأوقات المتاحة", "ku": "خشتە و کاتی بەردەست" },
+          "text": {
+            "en": "Set your working shifts; patients can only book the times you actually offer.",
+            "ar": "حدّد أوقات عملك؛ لا يستطيع المرضى الحجز إلا في الأوقات التي تتيحها فعلاً.",
+            "ku": "کاتەکانی کارت دیاری بکە؛ نەخۆش تەنها ئەو کاتانە دەتوانێت حجز بکات کە بەردەستن."
+          }
+        },
+        {
+          "id": "prescriptions", "image": null,
+          "title": { "en": "Prescription composer", "ar": "محرّر الوصفات", "ku": "دروستکەری نوسخە" },
+          "text": {
+            "en": "Write a prescription from a standardised medication catalogue, with directions in the patient's language.",
+            "ar": "اكتب الوصفة من كتالوج أدوية موحّد، مع الإرشادات بلغة المريض.",
+            "ku": "نوسخە لە کەتەلۆگی دەرمانی ستاندارد بنووسە، بە ڕێنمایی بە زمانی نەخۆش."
+          }
+        },
+        {
+          "id": "medications", "image": null,
+          "title": { "en": "Favourites and prescription sets", "ar": "المفضلة ومجموعات الوصفات", "ku": "دڵخوازەکان و کۆمەڵە نوسخەکان" },
+          "text": {
+            "en": "Save the medications and combinations you prescribe often, so routine visits take seconds.",
+            "ar": "احفظ الأدوية والتركيبات التي تصفها كثيراً، لتستغرق الزيارات الاعتيادية ثوانٍ.",
+            "ku": "ئەو دەرمان و تێکەڵانەی زۆرجار دەیاننووسیت پاشەکەوت بکە، تا سەردانی ئاسایی چەند چرکەیەک بێت."
+          }
+        },
+        {
+          "id": "clinical-requests", "image": null,
+          "title": { "en": "Pharmacy and laboratory requests", "ar": "طلبات الصيدلية والمختبر", "ku": "داواکاری دەرمانخانە و تاقیگە" },
+          "text": {
+            "en": "Send a prescription to a partner pharmacy or a test to a laboratory, and follow its status.",
+            "ar": "أرسل وصفة إلى صيدلية شريكة أو فحصاً إلى مختبر، وتابع حالتها.",
+            "ku": "نوسخە بۆ دەرمانخانەی هاوبەش یان پشکنین بۆ تاقیگە بنێرە و دۆخەکەی بەدواداچوون بکە."
+          }
+        },
+        {
+          "id": "billing", "image": null,
+          "title": { "en": "Subscription and billing", "ar": "الاشتراك والفوترة", "ku": "بەشداری و پارەدان" },
+          "text": {
+            "en": "See your current plan and renew before it expires — no interruption to the clinic.",
+            "ar": "اطّلع على خطتك الحالية وجدّدها قبل انتهائها — دون انقطاع العيادة.",
+            "ku": "پلانی ئێستات ببینە و پێش کۆتاییهاتن نوێی بکەرەوە — بێ وەستانی کلینیک."
+          }
+        }
+      ]
+    },
+    {
+      "id": "pharmacy",
+      "cta_url": "https://doctor.trustydr.com",
+      "name": { "en": "Pharmacy Platform", "ar": "منصة الصيدليات", "ku": "پلاتفۆرمی دەرمانخانە" },
+      "tagline": {
+        "en": "Prescriptions arrive digitally and move through a clear queue.",
+        "ar": "تصل الوصفات رقمياً وتتحرك عبر طابور واضح.",
+        "ku": "نوسخەکان بە دیجیتاڵی دێن و بە ڕیزێکی ڕوون دەڕۆن."
+      },
+      "steps": [
+        {
+          "id": "dashboard", "image": null,
+          "title": { "en": "Pharmacy dashboard", "ar": "لوحة الصيدلية", "ku": "داشبۆردی دەرمانخانە" },
+          "text": {
+            "en": "What needs attention today across prescriptions, orders and your store.",
+            "ar": "ما يحتاج انتباهك اليوم من وصفات وطلبات ومتجرك.",
+            "ku": "ئەوەی ئەمڕۆ پێویستی بە سەرنجە لە نوسخە و داواکاری و فرۆشگاکەت."
+          }
+        },
+        {
+          "id": "incoming", "image": null,
+          "title": { "en": "Incoming prescriptions", "ar": "الوصفات الواردة", "ku": "نوسخە هاتووەکان" },
+          "text": {
+            "en": "Prescriptions sent by doctors arrive here directly — nothing is carried in by hand.",
+            "ar": "تصل الوصفات المرسلة من الأطباء هنا مباشرة — دون نقل ورقي.",
+            "ku": "ئەو نوسخانەی پزیشکان دەینێرن ڕاستەوخۆ لێرە دێن — هیچ بە دەست ناهێنرێت."
+          }
+        },
+        {
+          "id": "dispensing", "image": null,
+          "title": { "en": "Prepare and dispense", "ar": "التجهيز والصرف", "ku": "ئامادەکردن و دابەشکردن" },
+          "text": {
+            "en": "Work an order through received, preparing, ready and dispensed — the patient is notified at each step.",
+            "ar": "انقل الطلب عبر: مستلم، قيد التجهيز، جاهز، وتم الصرف — ويُشعر المريض في كل خطوة.",
+            "ku": "داواکارییەکە ببە بە وەرگیراو، ئامادەکردن، ئامادە و دابەشکراودا — نەخۆش لە هەر هەنگاوێک ئاگادار دەکرێتەوە."
+          }
+        },
+        {
+          "id": "services", "image": null,
+          "title": { "en": "Services", "ar": "الخدمات", "ku": "خزمەتگوزارییەکان" },
+          "text": {
+            "en": "Publish what your pharmacy offers so doctors and patients can find you.",
+            "ar": "انشر ما تقدّمه صيدليتك ليتمكن الأطباء والمرضى من الوصول إليك.",
+            "ku": "ئەوەی دەرمانخانەکەت پێشکەشی دەکات بڵاو بکەرەوە تا پزیشک و نەخۆش بتدۆزنەوە."
+          }
+        },
+        {
+          "id": "store", "image": null,
+          "title": { "en": "Store and products", "ar": "المتجر والمنتجات", "ku": "فرۆشگا و بەرهەمەکان" },
+          "text": {
+            "en": "Manage your product catalogue and keep your online store current.",
+            "ar": "أدر كتالوج منتجاتك وحافظ على تحديث متجرك الإلكتروني.",
+            "ku": "کەتەلۆگی بەرهەمەکانت بەڕێوە ببە و فرۆشگا ئۆنلاینەکەت نوێ ڕابگرە."
+          }
+        },
+        {
+          "id": "orders", "image": null,
+          "title": { "en": "Orders and picking", "ar": "الطلبات والتجهيز", "ku": "داواکاری و کۆکردنەوە" },
+          "text": {
+            "en": "Pick, pack and fulfil customer orders from one working screen.",
+            "ar": "جهّز الطلبات وغلّفها ونفّذها من شاشة عمل واحدة.",
+            "ku": "داواکاری کڕیاران لە یەک شاشەدا کۆبکەرەوە و پێچە و جێبەجێ بکە."
+          }
+        },
+        {
+          "id": "billing", "image": null,
+          "title": { "en": "Subscription and billing", "ar": "الاشتراك والفوترة", "ku": "بەشداری و پارەدان" },
+          "text": {
+            "en": "Your plan, renewal date and payment history in one place.",
+            "ar": "خطتك وتاريخ التجديد وسجل المدفوعات في مكان واحد.",
+            "ku": "پلانەکەت، بەرواری نوێکردنەوە و مێژووی پارەدان لە یەک شوێندا."
+          }
+        }
+      ]
+    },
+    {
+      "id": "laboratory",
+      "cta_url": "https://doctor.trustydr.com",
+      "name": { "en": "Laboratory Platform", "ar": "منصة المختبرات", "ku": "پلاتفۆرمی تاقیگە" },
+      "tagline": {
+        "en": "Requests in, results out — connected to the referring doctor.",
+        "ar": "الطلبات تصل والنتائج تخرج — مرتبطة بالطبيب المُحيل.",
+        "ku": "داواکاری دێت و ئەنجام دەردەچێت — پەیوەست بە پزیشکی ناردوو."
+      },
+      "steps": [
+        {
+          "id": "requests", "image": null,
+          "title": { "en": "Incoming requests", "ar": "الطلبات الواردة", "ku": "داواکارییە هاتووەکان" },
+          "text": {
+            "en": "Test and imaging requests arrive from doctors with the clinical context already attached.",
+            "ar": "تصل طلبات الفحوصات والأشعة من الأطباء مع السياق السريري مرفقاً.",
+            "ku": "داواکاری پشکنین و وێنەگرتن لە پزیشکانەوە دێن لەگەڵ زانیاری کلینیکی."
+          }
+        },
+        {
+          "id": "services", "image": null,
+          "title": { "en": "Service catalogue", "ar": "كتالوج الخدمات", "ku": "کەتەلۆگی خزمەتگوزاری" },
+          "text": {
+            "en": "List the tests and imaging you offer, with the ones patients can book online.",
+            "ar": "أدرج الفحوصات والأشعة التي تقدّمها، مع ما يمكن للمرضى حجزه إلكترونياً.",
+            "ku": "ئەو پشکنین و وێنەگرتنانە دابنێ کە پێشکەشی دەکەیت، لەگەڵ ئەوانەی نەخۆش دەتوانێت ئۆنلاین حجز بکات."
+          }
+        },
+        {
+          "id": "workflow", "image": null,
+          "title": { "en": "Patient check-in", "ar": "استقبال المريض", "ku": "پێشوازی نەخۆش" },
+          "text": {
+            "en": "Move a request from received to checked-in to completed as the patient is seen.",
+            "ar": "انقل الطلب من مستلم إلى تم الحضور إلى مكتمل مع تقدّم زيارة المريض.",
+            "ku": "داواکارییەکە لە وەرگیراوەوە بۆ هاتوو و پاشان تەواوبوو بگوازەوە."
+          }
+        },
+        {
+          "id": "results", "image": null,
+          "title": { "en": "Results and reports", "ar": "النتائج والتقارير", "ku": "ئەنجام و ڕاپۆرتەکان" },
+          "text": {
+            "en": "Attach the report and release it — the patient and the referring doctor both receive it.",
+            "ar": "أرفق التقرير وأصدره — يستلمه المريض والطبيب المُحيل معاً.",
+            "ku": "ڕاپۆرتەکە هاوپێچ بکە و بڵاوی بکەرەوە — نەخۆش و پزیشکی ناردوو هەردووکیان وەریدەگرن."
+          }
+        },
+        {
+          "id": "profile", "image": null,
+          "title": { "en": "Facility profile", "ar": "ملف المنشأة", "ku": "پرۆفایلی دامەزراوە" },
+          "text": {
+            "en": "Your address, hours and contact details, shown to doctors and patients choosing a laboratory.",
+            "ar": "عنوانك وساعات العمل وبيانات التواصل، تظهر للأطباء والمرضى عند اختيار مختبر.",
+            "ku": "ناونیشان و کاتەکان و زانیاری پەیوەندی، بۆ پزیشک و نەخۆش پیشان دەدرێت."
+          }
+        },
+        {
+          "id": "billing", "image": null,
+          "title": { "en": "Subscription and billing", "ar": "الاشتراك والفوترة", "ku": "بەشداری و پارەدان" },
+          "text": {
+            "en": "Your plan, renewal date and payment history in one place.",
+            "ar": "خطتك وتاريخ التجديد وسجل المدفوعات في مكان واحد.",
+            "ku": "پلانەکەت، بەرواری نوێکردنەوە و مێژووی پارەدان لە یەک شوێندا."
+          }
+        }
+      ]
+    }
+  ]
+}
