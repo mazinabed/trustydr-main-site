@@ -223,14 +223,59 @@
 .ecoStepTitle { font-weight: 700; font-size: 14px; color: var(--text); }
 .ecoStepText  { font-size: 13px; color: var(--muted); margin-top: 2px; }
 
-.ecoCta {
-  display: inline-block;
-  background: var(--g2);
+/* The site's base .btn is sized for the coloured header bar - 13px text in
+   10x14 padding. Inherited unchanged down here on a light section, at the end
+   of a six-step workflow, it read as a small chip rather than the one action
+   the section is asking for. This is the primary conversion point of the
+   homepage, so it is sized and weighted like one.
+
+   Brand gradient rather than the flat --g2 it had, matching .platformCard's
+   own primary button, so it belongs to the same family as the other real
+   buttons on the page. */
+.btn.primary.ecoCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--g1), var(--g2));
   color: #fff;
-  margin-top: 18px;
+  margin-top: 22px;
+  padding: 16px 34px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px;
+  letter-spacing: .2px;
+  box-shadow: 0 10px 24px rgba(74, 144, 226, .28);
 }
 
-.ecoCtaNote { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+.btn.primary.ecoCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(74, 144, 226, .34);
+}
+
+.btn.primary.ecoCta:active { transform: translateY(0); }
+
+/* The base .btn has no focus style of its own on a light background. */
+.btn.primary.ecoCta:focus-visible {
+  outline: 3px solid var(--g2);
+  outline-offset: 3px;
+}
+
+.ecoCtaNote { margin: 10px 0 0; font-size: 13.5px; color: var(--muted); }
+
+/* On a narrow screen a 34px-padded button crowds the edges, so it becomes a
+   full-width tap target instead. */
+@media (max-width: 520px) {
+  .btn.primary.ecoCta {
+    display: flex;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 15.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.primary.ecoCta:hover { transform: none; }
+}
 
 .ecoControls { display: flex; gap: 10px; align-items: center; margin-top: 14px; }
 

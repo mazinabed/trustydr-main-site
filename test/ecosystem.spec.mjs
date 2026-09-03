@@ -180,6 +180,65 @@ async function run() {
     console.log('');
   }
 
+  // ── The Explore CTA ──────────────────────────────────────────────────────
+  //
+  // This is the one action the ecosystem section asks for, and it used to
+  // inherit the base .btn sizing meant for the coloured header bar: 13px text
+  // in 10x14 padding, and - because .btn.primary outranks .ecoCta - a white
+  // background on a light section. It measured 125x41 and read as a chip.
+  //
+  // Pinned by measurement rather than by CSS text, so any future change that
+  // shrinks it back is caught however it is written.
+  for (const { code, dir } of LOCALES) {
+    for (const [w, h, label] of [[1280, 900, 'desktop'], [375, 800, 'mobile']]) {
+      const page = await browser.newPage({ viewport: { width: w, height: h } });
+      await page.goto(`${BASE_URL}/${code}/`, { waitUntil: 'networkidle' });
+      console.log(`=== ${code} (${dir}) Explore CTA @ ${label} ===`);
+
+      const cta = page.locator('.ecoCta');
+      assert(await cta.count() === 1, 'the Explore CTA is on the page');
+
+      const box = await cta.boundingBox();
+      assert(box.height >= 46,
+        `CTA is a real button, not a chip (${Math.round(box.height)}px tall)`);
+      assert(box.width >= 150,
+        `CTA has presence (${Math.round(box.width)}px wide)`);
+
+      const style = await cta.evaluate((el) => {
+        const s = getComputedStyle(el);
+        return {
+          font: parseFloat(s.fontSize),
+          padX: parseFloat(s.paddingLeft),
+          padY: parseFloat(s.paddingTop),
+          gradient: s.backgroundImage.includes('gradient'),
+          shadow: s.boxShadow !== 'none',
+          cursor: s.cursor,
+        };
+      });
+      assert(style.font >= 15, `CTA text is readable (${style.font}px)`);
+      assert(style.padY >= 14 && style.padX >= 18,
+        `CTA has real padding (${style.padY}x${style.padX})`);
+      assert(style.gradient,
+        'CTA carries the brand gradient, not the header bar white');
+      assert(style.shadow, 'CTA is lifted off the section');
+      assert(style.cursor === 'pointer', 'CTA looks clickable');
+
+      // Localization and RTL are untouched by the restyle: it is CSS only, and
+      // nothing in the rule is direction-specific.
+      assert((await cta.getAttribute('href')) === `/${code}/explore/`,
+        'CTA still links to this locale\'s Explore');
+      assert(((await cta.innerText()) || '').trim().length > 0,
+        'CTA keeps its localized label');
+
+      const overflow = await page.evaluate(() =>
+        document.documentElement.scrollWidth > document.documentElement.clientWidth);
+      assert(!overflow, `no horizontal overflow at ${label}`);
+
+      await page.close();
+      console.log('');
+    }
+  }
+
   await browser.close();
   console.log(failures === 0 ? 'ALL CHECKS PASSED' : `${failures} CHECK(S) FAILED`);
   process.exit(failures > 0 ? 1 : 0);
