@@ -154,8 +154,22 @@
           }
         },
         {
+          "id": "prescription",
+          "image": "doctor-06-prescription.png",
+          "title": {
+            "en": "Issue a prescription",
+            "ar": "إصدار وصفة طبية",
+            "ku": "دەرکردنی نوسخەی دەرمان"
+          },
+          "text": {
+            "en": "Write the prescription on the visit, then print it for the patient or send it straight to a pharmacy. It stays on the record either way.",
+            "ar": "اكتب الوصفة ضمن الزيارة، ثم اطبعها للمريض أو أرسلها مباشرة إلى صيدلية. وتبقى مسجّلة في السجل في الحالتين.",
+            "ku": "نوسخەکە لە سەردانەکەدا بنووسە، پاشان بۆ نەخۆش چاپی بکە یان ڕاستەوخۆ بۆ دەرمانخانەیەک بینێرە. لە هەردوو حاڵەتدا لە تۆمارەکەدا دەمێنێتەوە."
+          }
+        },
+        {
           "id": "medications",
-          "image": "doctor-06-medications.png",
+          "image": "doctor-07-medications.png",
           "title": {
             "en": "Medication library",
             "ar": "مكتبة الأدوية",
@@ -169,7 +183,7 @@
         },
         {
           "id": "qr",
-          "image": "doctor-07-qr.png",
+          "image": "doctor-08-qr.png",
           "title": {
             "en": "Your patient QR code",
             "ar": "رمز QR الخاص بك",
@@ -306,93 +320,65 @@
         "ku": "پلاتفۆرمی تاقیگە"
       },
       "tagline": {
-        "en": "Requests in, results out — connected to the referring doctor.",
-        "ar": "الطلبات تصل والنتائج تخرج — مرتبطة بالطبيب المُحيل.",
-        "ku": "داواکاری دێت و ئەنجام دەردەچێت — پەیوەست بە پزیشکی ناردوو."
+        "en": "Requests arrive from doctors and move through one queue.",
+        "ar": "تصل الطلبات من الأطباء وتتحرك عبر طابور واحد.",
+        "ku": "داواکاریەکان لە پزیشکانەوە دێن و بە یەک ڕیزدا دەڕۆن."
       },
       "steps": [
         {
+          "id": "reception",
+          "image": "laboratory-01-reception.png",
+          "title": {
+            "en": "Requests arrive",
+            "ar": "وصول الطلبات",
+            "ku": "گەیشتنی داواکاریەکان"
+          },
+          "text": {
+            "en": "A test requested by a doctor lands in your reception board with the patient, the test and the referring doctor. Confirm receipt to take it on.",
+            "ar": "الفحص الذي يطلبه الطبيب يصل إلى لوحة الاستقبال مع المريض والفحص والطبيب المُحوِّل. أكّد الاستلام لتبدأ العمل عليه.",
+            "ku": "ئەو پشکنینەی پزیشک داوای دەکات دەگاتە تەختەی وەرگرتنت لەگەڵ نەخۆش و پشکنینەکە و ئەو پزیشکەی ناردوویەتی. وەرگرتن پشتڕاست بکەرەوە بۆ دەستپێکردن."
+          }
+        },
+        {
+          "id": "appointments",
+          "image": "laboratory-02-appointments.png",
+          "title": {
+            "en": "Appointments and home visits",
+            "ar": "المواعيد والزيارات المنزلية",
+            "ku": "کاتەکان و سەردانی ماڵەوە"
+          },
+          "text": {
+            "en": "Today, the next seven days, or any single day. Home visits sit alongside lab visits, each ready to be checked in.",
+            "ar": "مواعيد اليوم، أو الأيام السبعة القادمة، أو أي يوم محدد. تظهر الزيارات المنزلية بجانب زيارات المختبر، وكل منها جاهز لتسجيل الوصول.",
+            "ku": "کاتەکانی ئەمڕۆ، یان حەوت ڕۆژی داهاتوو، یان هەر ڕۆژێکی دیاریکراو. سەردانی ماڵەوە لەتەنیشت سەردانی تاقیگە دەبینرێت، هەریەکەیان ئامادەیە بۆ تۆمارکردنی گەیشتن."
+          }
+        },
+        {
+          "id": "checkin",
+          "image": "laboratory-03-checkin.png",
+          "title": {
+            "en": "Check in and collect payment",
+            "ar": "تسجيل الوصول وتحصيل الدفع",
+            "ku": "تۆمارکردنی گەیشتن و وەرگرتنی پارە"
+          },
+          "text": {
+            "en": "Register the patient on arrival and take payment in the same step — cash, card, Zain Cash, K-Card or bank transfer — with an optional receipt reference.",
+            "ar": "سجّل وصول المريض وحصّل الدفع في الخطوة نفسها — نقداً أو بطاقة أو زين كاش أو بطاقة كي أو تحويل بنكي — مع رقم إيصال اختياري.",
+            "ku": "گەیشتنی نەخۆش تۆمار بکە و لە هەمان هەنگاودا پارە وەربگرە — نەقد، کارت، زەین کاش، کە-کارت یان گواستنەوەی بانکی — لەگەڵ ژمارەی پسوولەی ئارەزوومەندانە."
+          }
+        },
+        {
           "id": "requests",
-          "image": null,
+          "image": "laboratory-04-requests.png",
           "title": {
-            "en": "Incoming requests",
-            "ar": "الطلبات الواردة",
-            "ku": "داواکارییە هاتووەکان"
+            "en": "Your lab request queue",
+            "ar": "طابور طلبات المختبر",
+            "ku": "ڕیزی داواکاری تاقیگەکەت"
           },
           "text": {
-            "en": "Test and imaging requests arrive from doctors with the clinical context already attached.",
-            "ar": "تصل طلبات الفحوصات والأشعة من الأطباء مع السياق السريري مرفقاً.",
-            "ku": "داواکاری پشکنین و وێنەگرتن لە پزیشکانەوە دێن لەگەڵ زانیاری کلینیکی."
-          }
-        },
-        {
-          "id": "services",
-          "image": null,
-          "title": {
-            "en": "Service catalogue",
-            "ar": "كتالوج الخدمات",
-            "ku": "کەتەلۆگی خزمەتگوزاری"
-          },
-          "text": {
-            "en": "List the tests and imaging you offer, with the ones patients can book online.",
-            "ar": "أدرج الفحوصات والأشعة التي تقدّمها، مع ما يمكن للمرضى حجزه إلكترونياً.",
-            "ku": "ئەو پشکنین و وێنەگرتنانە دابنێ کە پێشکەشی دەکەیت، لەگەڵ ئەوانەی نەخۆش دەتوانێت ئۆنلاین حجز بکات."
-          }
-        },
-        {
-          "id": "workflow",
-          "image": null,
-          "title": {
-            "en": "Patient check-in",
-            "ar": "استقبال المريض",
-            "ku": "پێشوازی نەخۆش"
-          },
-          "text": {
-            "en": "Move a request from received to checked-in to completed as the patient is seen.",
-            "ar": "انقل الطلب من مستلم إلى تم الحضور إلى مكتمل مع تقدّم زيارة المريض.",
-            "ku": "داواکارییەکە لە وەرگیراوەوە بۆ هاتوو و پاشان تەواوبوو بگوازەوە."
-          }
-        },
-        {
-          "id": "results",
-          "image": null,
-          "title": {
-            "en": "Results and reports",
-            "ar": "النتائج والتقارير",
-            "ku": "ئەنجام و ڕاپۆرتەکان"
-          },
-          "text": {
-            "en": "Attach the report and release it — the patient and the referring doctor both receive it.",
-            "ar": "أرفق التقرير وأصدره — يستلمه المريض والطبيب المُحيل معاً.",
-            "ku": "ڕاپۆرتەکە هاوپێچ بکە و بڵاوی بکەرەوە — نەخۆش و پزیشکی ناردوو هەردووکیان وەریدەگرن."
-          }
-        },
-        {
-          "id": "profile",
-          "image": null,
-          "title": {
-            "en": "Facility profile",
-            "ar": "ملف المنشأة",
-            "ku": "پرۆفایلی دامەزراوە"
-          },
-          "text": {
-            "en": "Your address, hours and contact details, shown to doctors and patients choosing a laboratory.",
-            "ar": "عنوانك وساعات العمل وبيانات التواصل، تظهر للأطباء والمرضى عند اختيار مختبر.",
-            "ku": "ناونیشان و کاتەکان و زانیاری پەیوەندی، بۆ پزیشک و نەخۆش پیشان دەدرێت."
-          }
-        },
-        {
-          "id": "billing",
-          "image": null,
-          "title": {
-            "en": "Subscription and billing",
-            "ar": "الاشتراك والفوترة",
-            "ku": "بەشداری و پارەدان"
-          },
-          "text": {
-            "en": "Your plan, renewal date and payment history in one place.",
-            "ar": "خطتك وتاريخ التجديد وسجل المدفوعات في مكان واحد.",
-            "ku": "پلانەکەت، بەرواری نوێکردنەوە و مێژووی پارەدان لە یەک شوێندا."
+            "en": "Registered, in progress and completed. Each request keeps the patient, the test, the requesting doctor and the centre it came from, ready to start processing.",
+            "ar": "تم التسجيل، قيد المعالجة، ومكتمل. كل طلب يحتفظ بالمريض والفحص والطبيب الطالب والمركز الذي جاء منه، جاهزاً لبدء المعالجة.",
+            "ku": "تۆمارکراو، لە پرۆسەدا، و تەواوبوو. هەر داواکاریەک نەخۆش و پشکنین و ئەو پزیشکەی داوای کردووە و ئەو ناوەندەی لێوەی هاتووە دەپارێزێت، ئامادەیە بۆ دەستپێکردنی پرۆسە."
           }
         }
       ]
