@@ -73,9 +73,10 @@
   </section>
 
   <div class="container">
-    <div class="tourSingleHead">
-      <h2 class="tourSingleName" data-tour-track-name>پۆرتاڵی پزیشک</h2>
-      <p class="tourSingleNote">کلینیک و کاتی ژووان و نوسخە لە یەک شوێندا.</p>
+    <h2 class="tourPick">پلاتفۆرمێک هەڵبژێرە</h2>
+    <div class="tourTabs" role="tablist" aria-label="پلاتفۆرمێک هەڵبژێرە">
+        <button type="button" class="tourTab is-active" role="tab" id="tab-doctor" aria-controls="panel-doctor" aria-selected="true" data-tour-tab="doctor">پۆرتاڵی پزیشک<span class="tourTabNote">کلینیک و کاتی ژووان و نوسخە لە یەک شوێندا.</span></button>
+        <button type="button" class="tourTab" role="tab" id="tab-pharmacy" aria-controls="panel-pharmacy" aria-selected="false" data-tour-tab="pharmacy">پلاتفۆرمی دەرمانخانە<span class="tourTabNote">نوسخەکان بە دیجیتاڵی دێن و بە کۆگای فرۆشگا یان بەبێی دابەش دەکرێن.</span></button>
     </div>
 
       <section class="tourPanel is-active" role="tabpanel" id="panel-doctor" aria-labelledby="tab-doctor" data-tour-panel="doctor">
@@ -116,33 +117,134 @@
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">هەنگاو 4</span>
-            <h3 class="tourStepTitle">کتێبخانەی دەرمان</h3>
+            <h3 class="tourStepTitle">کاتەکان</h3>
           </div>
-          <p class="tourStepText">لیستی دەرمانی ناوەندەکەت، لە کەتەلۆگی TrustyDr، لەگەڵ دڵخوازەکان و کۆمەڵە نوسخە دووبارە بەکاردێنراوەکان. ناوی دەرمان ستانداردە و وەرناگێڕدرێت.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-medications.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کتێبخانەی دەرمان">
-            <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="پۆرتاڵی پزیشک — کتێبخانەی دەرمان" loading="lazy" decoding="async">
+          <p class="tourStepText">کاتەکانی ئەمڕۆ، یان حەوت ڕۆژی داهاتوو، یان هەر ڕۆژێکی دیاریکراو. هەر کاتێک نەخۆش و پزیشک و دۆخی پارەدان لەگەڵ خۆیدا هەیە.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-appointments.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کاتەکان">
+            <img class="tourShot" src="/assets/img/tour/doctor-04-appointments.png" alt="پۆرتاڵی پزیشک — کاتەکان" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
           </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">هەنگاو 5</span>
-            <h3 class="tourStepTitle">پێوەرەکانی کارایی</h3>
+            <h3 class="tourStepTitle">تۆماری سەردان</h3>
           </div>
-          <p class="tourStepText">کاتەکانی ژووان، سەردانە تەواوبووەکان، نەهاتووەکان، هەڵوەشاوەکان و داهات — بۆ ڕۆژ، هەفتە یان مانگ.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-insights.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — پێوەرەکانی کارایی">
-            <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="پۆرتاڵی پزیشک — پێوەرەکانی کارایی" loading="lazy" decoding="async">
+          <p class="tourStepText">تێبینی کلینیکی و وێنەی سەردان و داواکاری تاقیگە و وێنەگرتن و نوسخەی دەرمان — لە هەمان شاشەدا دەنوسرێن یان هاوپێچ دەکرێن.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-appointment-detail.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — تۆماری سەردان">
+            <img class="tourShot" src="/assets/img/tour/doctor-05-appointment-detail.png" alt="پۆرتاڵی پزیشک — تۆماری سەردان" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
           </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">هەنگاو 6</span>
+            <h3 class="tourStepTitle">کتێبخانەی دەرمان</h3>
+          </div>
+          <p class="tourStepText">لیستی دەرمانی ناوەندەکەت، لە کەتەلۆگی TrustyDr، لەگەڵ دڵخوازەکان و کۆمەڵە نوسخە دووبارە بەکاردێنراوەکان.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-medications.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کتێبخانەی دەرمان">
+            <img class="tourShot" src="/assets/img/tour/doctor-06-medications.png" alt="پۆرتاڵی پزیشک — کتێبخانەی دەرمان" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 7</span>
             <h3 class="tourStepTitle">کۆدی QR ـی تۆ</h3>
           </div>
           <p class="tourStepText">کۆدی QR بۆ پرۆفایلی گشتیت. لە پێشوازی دایبنێ تا نەخۆش بتوانێت پرۆفایلەکەت ببینێت و کاتی ژووان بگرێت.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-qr.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کۆدی QR ـی تۆ">
-            <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="پۆرتاڵی پزیشک — کۆدی QR ـی تۆ" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-07-qr.png" aria-label="بە قەبارەی تەواو ببینە: پۆرتاڵی پزیشک — کۆدی QR ـی تۆ">
+            <img class="tourShot" src="/assets/img/tour/doctor-07-qr.png" alt="پۆرتاڵی پزیشک — کۆدی QR ـی تۆ" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        </ol>
+        <div class="tourCta">
+          <h2 class="tourCtaTitle">ئامادەیت بۆ بەشداری TrustyDr؟</h2>
+          <p class="tourCtaText">هەژمارەکەت دروست بکە و دەست بکە بە پەیوەندی لەگەڵ نەخۆش و دەرمانخانە و تاقیگە.</p>
+          <div class="tourCtaRow">
+            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">دروستکردنی هەژمار</a>
+            <a class="btn ghost" href="/ku/contact/">پەیوەندیمان پێوە بکە</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tourPanel" role="tabpanel" id="panel-pharmacy" aria-labelledby="tab-pharmacy" data-tour-panel="pharmacy" hidden>
+        <ol class="tourSteps">
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 1</span>
+            <h3 class="tourStepTitle">پەڕەی سەرەکی دەرمانخانەکەت</h3>
+          </div>
+          <p class="tourStepText">دۆخی پشتڕاستکردنەوە و بەشداری لە سەرەوە، لەگەڵ کاتەکانی کارکردن و کۆدی QR و دەزگاکەت بە یەک کرتە.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-01-dashboard.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — پەڕەی سەرەکی دەرمانخانەکەت">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-01-dashboard.png" alt="پلاتفۆرمی دەرمانخانە — پەڕەی سەرەکی دەرمانخانەکەت" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 2</span>
+            <h3 class="tourStepTitle">کاتەکانی کارکردن</h3>
+          </div>
+          <p class="tourStepText">کاتی کردنەوە و داخستن بۆ هەر ڕۆژێک دیاری بکە، و ئەو ڕۆژانە دابخە کە کار ناکەیت. نەخۆشەکان دەزانن کەی کراوەیت.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-02-hours.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — کاتەکانی کارکردن">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-02-hours.png" alt="پلاتفۆرمی دەرمانخانە — کاتەکانی کارکردن" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 3</span>
+            <h3 class="tourStepTitle">گەیشتنی نوسخەکان</h3>
+          </div>
+          <p class="tourStepText">ئەو نوسخەیەی پزیشک دەینێرێت دەگاتە تەختەی وەرگرتنت لەگەڵ نەخۆش و پزیشکی نوسەر و دەرمانەکە. وەرگرتن پشتڕاست بکەرەوە بۆ دەستپێکردن.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-03-incoming.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — گەیشتنی نوسخەکان">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-03-incoming.png" alt="پلاتفۆرمی دەرمانخانە — گەیشتنی نوسخەکان" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 4</span>
+            <h3 class="tourStepTitle">تەختەی ئامادەکردن</h3>
+          </div>
+          <p class="tourStepText">وەرگیراو، لە ئامادەکردندا، و ئامادە — هەموو ئەو نوسخانەی تیمەکەت کاریان لەسەر دەکات لە یەک شوێندا.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-04-preparation.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — تەختەی ئامادەکردن">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-04-preparation.png" alt="پلاتفۆرمی دەرمانخانە — تەختەی ئامادەکردن" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 5</span>
+            <h3 class="tourStepTitle">دابەشکردن، بە کۆگای فرۆشگا یان بەبێی</h3>
+          </div>
+          <p class="tourStepText">لە کۆگای فرۆشگای TrustyDr دابەش بکە ئەگەر بەکاری دەهێنیت، یان ئەوەی داوتە بە دەستی تۆمار بکە. ئەو دەرمانخانەیەی کۆگای فرۆشگای نییە بە هەمان شێوە کار دەکات.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-05-dispensing.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — دابەشکردن، بە کۆگای فرۆشگا یان بەبێی">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-05-dispensing.png" alt="پلاتفۆرمی دەرمانخانە — دابەشکردن، بە کۆگای فرۆشگا یان بەبێی" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 6</span>
+            <h3 class="tourStepTitle">وەرگرتنی پارە و پێدان</h3>
+          </div>
+          <p class="tourStepText">نوسخە ئامادەکان بڕی پارەی ماوە پیشان دەدەن. لە یەک هەنگاودا پارە وەربگرە و دابەش بکە، یان ڕاستەوخۆ دابەش بکە ئەگەر پارەکەی دراوە.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-06-ready.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — وەرگرتنی پارە و پێدان">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-06-ready.png" alt="پلاتفۆرمی دەرمانخانە — وەرگرتنی پارە و پێدان" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">هەنگاو 7</span>
+            <h3 class="tourStepTitle">نوسخەیەکی پشتڕاستکراوە</h3>
+          </div>
+          <p class="tourStepText">هەر نوسخەیەک بە ژمارەی ئاماژە و کۆدی QR چاپ دەکرێت کە بەرامبەر بە تۆمارە دەرکراوەکەی TrustyDr پشتڕاستی دەکاتەوە.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-07-printable.png" aria-label="بە قەبارەی تەواو ببینە: پلاتفۆرمی دەرمانخانە — نوسخەیەکی پشتڕاستکراوە">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-07-printable.png" alt="پلاتفۆرمی دەرمانخانە — نوسخەیەکی پشتڕاستکراوە" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">بە قەبارەی تەواو ببینە</span>
           </button>
         </li>

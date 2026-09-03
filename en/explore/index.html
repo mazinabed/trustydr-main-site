@@ -73,9 +73,10 @@
   </section>
 
   <div class="container">
-    <div class="tourSingleHead">
-      <h2 class="tourSingleName" data-tour-track-name>Doctor Portal</h2>
-      <p class="tourSingleNote">Clinic, appointments and prescriptions in one place.</p>
+    <h2 class="tourPick">Choose a platform</h2>
+    <div class="tourTabs" role="tablist" aria-label="Choose a platform">
+        <button type="button" class="tourTab is-active" role="tab" id="tab-doctor" aria-controls="panel-doctor" aria-selected="true" data-tour-tab="doctor">Doctor Portal<span class="tourTabNote">Clinic, appointments and prescriptions in one place.</span></button>
+        <button type="button" class="tourTab" role="tab" id="tab-pharmacy" aria-controls="panel-pharmacy" aria-selected="false" data-tour-tab="pharmacy">Pharmacy Platform<span class="tourTabNote">Prescriptions arrive digitally and are fulfilled with or without Store inventory.</span></button>
     </div>
 
       <section class="tourPanel is-active" role="tabpanel" id="panel-doctor" aria-labelledby="tab-doctor" data-tour-panel="doctor">
@@ -116,33 +117,134 @@
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">Step 4</span>
-            <h3 class="tourStepTitle">Medication library</h3>
+            <h3 class="tourStepTitle">Appointments</h3>
           </div>
-          <p class="tourStepText">Your centre’s own list of medications, drawn from the TrustyDr catalogue, with favourites and reusable prescription sets beside it. Medication names are standardised and never translated.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-medications.png" aria-label="View full size: Doctor Portal — Medication library">
-            <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="Doctor Portal — Medication library" loading="lazy" decoding="async">
+          <p class="tourStepText">Today, the next seven days, or any single day. Each booking carries the patient, the doctor and its payment state.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-appointments.png" aria-label="View full size: Doctor Portal — Appointments">
+            <img class="tourShot" src="/assets/img/tour/doctor-04-appointments.png" alt="Doctor Portal — Appointments" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">View full size</span>
           </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">Step 5</span>
-            <h3 class="tourStepTitle">Practice insights</h3>
+            <h3 class="tourStepTitle">The visit record</h3>
           </div>
-          <p class="tourStepText">Appointments, completed visits, no-shows, cancellations and revenue — for the day, the week or the month.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-insights.png" aria-label="View full size: Doctor Portal — Practice insights">
-            <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="Doctor Portal — Practice insights" loading="lazy" decoding="async">
+          <p class="tourStepText">Clinical notes, visit photos, lab and imaging requests, and the prescription — written or attached from the same screen.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-appointment-detail.png" aria-label="View full size: Doctor Portal — The visit record">
+            <img class="tourShot" src="/assets/img/tour/doctor-05-appointment-detail.png" alt="Doctor Portal — The visit record" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">View full size</span>
           </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">Step 6</span>
+            <h3 class="tourStepTitle">Medication library</h3>
+          </div>
+          <p class="tourStepText">Your centre’s own list of medications, drawn from the TrustyDr catalogue, with favourites and reusable prescription sets beside it.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-medications.png" aria-label="View full size: Doctor Portal — Medication library">
+            <img class="tourShot" src="/assets/img/tour/doctor-06-medications.png" alt="Doctor Portal — Medication library" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 7</span>
             <h3 class="tourStepTitle">Your patient QR code</h3>
           </div>
-          <p class="tourStepText">A QR code for your public profile. Put it on the reception desk and patients can view your profile and book an appointment.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-qr.png" aria-label="View full size: Doctor Portal — Your patient QR code">
-            <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="Doctor Portal — Your patient QR code" loading="lazy" decoding="async">
+          <p class="tourStepText">A QR code for your public profile. Put it on the reception desk and patients can view your profile and book.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-07-qr.png" aria-label="View full size: Doctor Portal — Your patient QR code">
+            <img class="tourShot" src="/assets/img/tour/doctor-07-qr.png" alt="Doctor Portal — Your patient QR code" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        </ol>
+        <div class="tourCta">
+          <h2 class="tourCtaTitle">Ready to join TrustyDr?</h2>
+          <p class="tourCtaText">Create your account and start connecting with patients, pharmacies and laboratories.</p>
+          <div class="tourCtaRow">
+            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">Create account</a>
+            <a class="btn ghost" href="/en/contact/">Talk to us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tourPanel" role="tabpanel" id="panel-pharmacy" aria-labelledby="tab-pharmacy" data-tour-panel="pharmacy" hidden>
+        <ol class="tourSteps">
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 1</span>
+            <h3 class="tourStepTitle">Your pharmacy home</h3>
+          </div>
+          <p class="tourStepText">Verification and subscription status at the top, with opening hours, your QR code and your facility a tap away.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-01-dashboard.png" aria-label="View full size: Pharmacy Platform — Your pharmacy home">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-01-dashboard.png" alt="Pharmacy Platform — Your pharmacy home" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 2</span>
+            <h3 class="tourStepTitle">Opening hours</h3>
+          </div>
+          <p class="tourStepText">Set opening and closing times for each day, and close the days you do not trade. Patients see when you are open.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-02-hours.png" aria-label="View full size: Pharmacy Platform — Opening hours">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-02-hours.png" alt="Pharmacy Platform — Opening hours" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 3</span>
+            <h3 class="tourStepTitle">Prescriptions arrive</h3>
+          </div>
+          <p class="tourStepText">A prescription sent by a doctor lands in your reception board with the patient, the prescriber and the medication. Confirm receipt to take it on.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-03-incoming.png" aria-label="View full size: Pharmacy Platform — Prescriptions arrive">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-03-incoming.png" alt="Pharmacy Platform — Prescriptions arrive" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 4</span>
+            <h3 class="tourStepTitle">Preparation board</h3>
+          </div>
+          <p class="tourStepText">Received, in preparation, and ready — every prescription your team is working on, in one place.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-04-preparation.png" aria-label="View full size: Pharmacy Platform — Preparation board">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-04-preparation.png" alt="Pharmacy Platform — Preparation board" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 5</span>
+            <h3 class="tourStepTitle">Dispensing, with or without Store inventory</h3>
+          </div>
+          <p class="tourStepText">Dispense against TrustyDr Store inventory when you use it, or record what you handed over manually. A pharmacy with no Store inventory works exactly the same.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-05-dispensing.png" aria-label="View full size: Pharmacy Platform — Dispensing, with or without Store inventory">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-05-dispensing.png" alt="Pharmacy Platform — Dispensing, with or without Store inventory" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 6</span>
+            <h3 class="tourStepTitle">Collect and hand over</h3>
+          </div>
+          <p class="tourStepText">Ready prescriptions show what is owed. Take payment and dispense in one step, or dispense straight away if it is already paid.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-06-ready.png" aria-label="View full size: Pharmacy Platform — Collect and hand over">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-06-ready.png" alt="Pharmacy Platform — Collect and hand over" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">View full size</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">Step 7</span>
+            <h3 class="tourStepTitle">A verifiable prescription</h3>
+          </div>
+          <p class="tourStepText">Every prescription prints with its reference and a QR code that confirms it against the record TrustyDr issued.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-07-printable.png" aria-label="View full size: Pharmacy Platform — A verifiable prescription">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-07-printable.png" alt="Pharmacy Platform — A verifiable prescription" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">View full size</span>
           </button>
         </li>

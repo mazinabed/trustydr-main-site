@@ -73,9 +73,10 @@
   </section>
 
   <div class="container">
-    <div class="tourSingleHead">
-      <h2 class="tourSingleName" data-tour-track-name>بوابة الأطباء</h2>
-      <p class="tourSingleNote">العيادة والمواعيد والوصفات في مكان واحد.</p>
+    <h2 class="tourPick">اختر المنصة</h2>
+    <div class="tourTabs" role="tablist" aria-label="اختر المنصة">
+        <button type="button" class="tourTab is-active" role="tab" id="tab-doctor" aria-controls="panel-doctor" aria-selected="true" data-tour-tab="doctor">بوابة الأطباء<span class="tourTabNote">العيادة والمواعيد والوصفات في مكان واحد.</span></button>
+        <button type="button" class="tourTab" role="tab" id="tab-pharmacy" aria-controls="panel-pharmacy" aria-selected="false" data-tour-tab="pharmacy">منصة الصيدليات<span class="tourTabNote">تصل الوصفات رقمياً وتُصرف مع مخزون المتجر أو بدونه.</span></button>
     </div>
 
       <section class="tourPanel is-active" role="tabpanel" id="panel-doctor" aria-labelledby="tab-doctor" data-tour-panel="doctor">
@@ -116,33 +117,134 @@
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">الخطوة 4</span>
-            <h3 class="tourStepTitle">مكتبة الأدوية</h3>
+            <h3 class="tourStepTitle">المواعيد</h3>
           </div>
-          <p class="tourStepText">قائمة أدوية مركزك، من كتالوج TrustyDr، مع المفضلة ومجموعات الوصفات القابلة لإعادة الاستخدام. أسماء الأدوية موحّدة ولا تُترجم.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-medications.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — مكتبة الأدوية">
-            <img class="tourShot" src="/assets/img/tour/doctor-05-medications.png" alt="بوابة الأطباء — مكتبة الأدوية" loading="lazy" decoding="async">
+          <p class="tourStepText">مواعيد اليوم، أو الأيام السبعة القادمة، أو أي يوم محدد. كل حجز يحمل المريض والطبيب وحالة الدفع.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-appointments.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — المواعيد">
+            <img class="tourShot" src="/assets/img/tour/doctor-04-appointments.png" alt="بوابة الأطباء — المواعيد" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
           </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">الخطوة 5</span>
-            <h3 class="tourStepTitle">مؤشرات الأداء</h3>
+            <h3 class="tourStepTitle">سجل الزيارة</h3>
           </div>
-          <p class="tourStepText">المواعيد والزيارات المنجزة وحالات عدم الحضور والإلغاءات والإيرادات — لليوم أو الأسبوع أو الشهر.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-04-insights.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — مؤشرات الأداء">
-            <img class="tourShot" src="/assets/img/tour/doctor-04-insights.png" alt="بوابة الأطباء — مؤشرات الأداء" loading="lazy" decoding="async">
+          <p class="tourStepText">الملاحظات السريرية وصور الزيارة وطلبات المختبر والأشعة والوصفة الطبية — تُكتب أو تُرفق من الشاشة نفسها.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-05-appointment-detail.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — سجل الزيارة">
+            <img class="tourShot" src="/assets/img/tour/doctor-05-appointment-detail.png" alt="بوابة الأطباء — سجل الزيارة" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
           </button>
         </li>
         <li class="tourStep">
           <div class="tourStepHead">
             <span class="tourStepNum">الخطوة 6</span>
+            <h3 class="tourStepTitle">مكتبة الأدوية</h3>
+          </div>
+          <p class="tourStepText">قائمة أدوية مركزك، من كتالوج TrustyDr، مع المفضلة ومجموعات الوصفات القابلة لإعادة الاستخدام.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-medications.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — مكتبة الأدوية">
+            <img class="tourShot" src="/assets/img/tour/doctor-06-medications.png" alt="بوابة الأطباء — مكتبة الأدوية" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 7</span>
             <h3 class="tourStepTitle">رمز QR الخاص بك</h3>
           </div>
           <p class="tourStepText">رمز QR لملفك العام. ضعه في الاستقبال ليتمكن المرضى من عرض ملفك وحجز المواعيد.</p>
-          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-06-qr.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — رمز QR الخاص بك">
-            <img class="tourShot" src="/assets/img/tour/doctor-06-qr.png" alt="بوابة الأطباء — رمز QR الخاص بك" loading="lazy" decoding="async">
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/doctor-07-qr.png" aria-label="عرض بالحجم الكامل: بوابة الأطباء — رمز QR الخاص بك">
+            <img class="tourShot" src="/assets/img/tour/doctor-07-qr.png" alt="بوابة الأطباء — رمز QR الخاص بك" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        </ol>
+        <div class="tourCta">
+          <h2 class="tourCtaTitle">جاهز للانضمام إلى TrustyDr؟</h2>
+          <p class="tourCtaText">أنشئ حسابك وابدأ التواصل مع المرضى والصيدليات والمختبرات.</p>
+          <div class="tourCtaRow">
+            <a class="btn primary" href="https://doctor.trustydr.com" target="_blank" rel="noopener">إنشاء حساب</a>
+            <a class="btn ghost" href="/ar/contact/">تواصل معنا</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tourPanel" role="tabpanel" id="panel-pharmacy" aria-labelledby="tab-pharmacy" data-tour-panel="pharmacy" hidden>
+        <ol class="tourSteps">
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 1</span>
+            <h3 class="tourStepTitle">الصفحة الرئيسية لصيدليتك</h3>
+          </div>
+          <p class="tourStepText">حالة التوثيق والاشتراك في الأعلى، مع ساعات العمل ورمز QR ومرفقك على بُعد نقرة واحدة.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-01-dashboard.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — الصفحة الرئيسية لصيدليتك">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-01-dashboard.png" alt="منصة الصيدليات — الصفحة الرئيسية لصيدليتك" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 2</span>
+            <h3 class="tourStepTitle">ساعات العمل</h3>
+          </div>
+          <p class="tourStepText">حدّد أوقات الفتح والإغلاق لكل يوم، وأغلق الأيام التي لا تعمل فيها. يرى المرضى متى تكون مفتوحاً.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-02-hours.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — ساعات العمل">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-02-hours.png" alt="منصة الصيدليات — ساعات العمل" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 3</span>
+            <h3 class="tourStepTitle">وصول الوصفات</h3>
+          </div>
+          <p class="tourStepText">الوصفة التي يرسلها الطبيب تصل إلى لوحة الاستقبال مع المريض والطبيب المُصدِر والدواء. أكّد الاستلام لتبدأ العمل عليها.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-03-incoming.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — وصول الوصفات">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-03-incoming.png" alt="منصة الصيدليات — وصول الوصفات" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 4</span>
+            <h3 class="tourStepTitle">لوحة التجهيز</h3>
+          </div>
+          <p class="tourStepText">تم الاستلام، قيد التحضير، وجاهزة — كل وصفة يعمل عليها فريقك في مكان واحد.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-04-preparation.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — لوحة التجهيز">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-04-preparation.png" alt="منصة الصيدليات — لوحة التجهيز" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 5</span>
+            <h3 class="tourStepTitle">الصرف، مع مخزون المتجر أو بدونه</h3>
+          </div>
+          <p class="tourStepText">اصرف من مخزون متجر TrustyDr إذا كنت تستخدمه، أو سجّل ما صرفته يدوياً. الصيدلية التي لا تملك مخزون متجر تعمل بالطريقة نفسها تماماً.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-05-dispensing.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — الصرف، مع مخزون المتجر أو بدونه">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-05-dispensing.png" alt="منصة الصيدليات — الصرف، مع مخزون المتجر أو بدونه" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 6</span>
+            <h3 class="tourStepTitle">التحصيل والتسليم</h3>
+          </div>
+          <p class="tourStepText">الوصفات الجاهزة تُظهر المبلغ المستحق. حصّل الدفع واصرف في خطوة واحدة، أو اصرف مباشرة إذا كانت مدفوعة.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-06-ready.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — التحصيل والتسليم">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-06-ready.png" alt="منصة الصيدليات — التحصيل والتسليم" loading="lazy" decoding="async">
+            <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
+          </button>
+        </li>
+        <li class="tourStep">
+          <div class="tourStepHead">
+            <span class="tourStepNum">الخطوة 7</span>
+            <h3 class="tourStepTitle">وصفة قابلة للتحقق</h3>
+          </div>
+          <p class="tourStepText">تُطبع كل وصفة برقم مرجعها ورمز QR يؤكد مطابقتها للسجل الصادر عن TrustyDr.</p>
+          <button type="button" class="tourShotBtn" data-tour-zoom data-tour-full="/assets/img/tour/pharmacy-07-printable.png" aria-label="عرض بالحجم الكامل: منصة الصيدليات — وصفة قابلة للتحقق">
+            <img class="tourShot" src="/assets/img/tour/pharmacy-07-printable.png" alt="منصة الصيدليات — وصفة قابلة للتحقق" loading="lazy" decoding="async">
             <span class="tourZoomHint" aria-hidden="true">عرض بالحجم الكامل</span>
           </button>
         </li>

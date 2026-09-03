@@ -126,57 +126,57 @@
           }
         },
         {
-          "id": "prescriptions",
-          "image": null,
+          "id": "appointments",
+          "image": "doctor-04-appointments.png",
           "title": {
-            "en": "Prescription composer",
-            "ar": "محرّر الوصفات",
-            "ku": "دروستکەری نوسخە"
+            "en": "Appointments",
+            "ar": "المواعيد",
+            "ku": "کاتەکان"
           },
           "text": {
-            "en": "Write a prescription from a standardised medication catalogue, with directions in the patient’s language.",
-            "ar": "اكتب الوصفة من كتالوج أدوية موحّد، مع الإرشادات بلغة المريض.",
-            "ku": "نوسخە لە کەتەلۆگی دەرمانی ستاندارد بنووسە، بە ڕێنمایی بە زمانی نەخۆش."
+            "en": "Today, the next seven days, or any single day. Each booking carries the patient, the doctor and its payment state.",
+            "ar": "مواعيد اليوم، أو الأيام السبعة القادمة، أو أي يوم محدد. كل حجز يحمل المريض والطبيب وحالة الدفع.",
+            "ku": "کاتەکانی ئەمڕۆ، یان حەوت ڕۆژی داهاتوو، یان هەر ڕۆژێکی دیاریکراو. هەر کاتێک نەخۆش و پزیشک و دۆخی پارەدان لەگەڵ خۆیدا هەیە."
+          }
+        },
+        {
+          "id": "visit",
+          "image": "doctor-05-appointment-detail.png",
+          "title": {
+            "en": "The visit record",
+            "ar": "سجل الزيارة",
+            "ku": "تۆماری سەردان"
+          },
+          "text": {
+            "en": "Clinical notes, visit photos, lab and imaging requests, and the prescription — written or attached from the same screen.",
+            "ar": "الملاحظات السريرية وصور الزيارة وطلبات المختبر والأشعة والوصفة الطبية — تُكتب أو تُرفق من الشاشة نفسها.",
+            "ku": "تێبینی کلینیکی و وێنەی سەردان و داواکاری تاقیگە و وێنەگرتن و نوسخەی دەرمان — لە هەمان شاشەدا دەنوسرێن یان هاوپێچ دەکرێن."
           }
         },
         {
           "id": "medications",
-          "image": "doctor-05-medications.png",
+          "image": "doctor-06-medications.png",
           "title": {
             "en": "Medication library",
             "ar": "مكتبة الأدوية",
             "ku": "کتێبخانەی دەرمان"
           },
           "text": {
-            "en": "Your centre’s own list of medications, drawn from the TrustyDr catalogue, with favourites and reusable prescription sets beside it. Medication names are standardised and never translated.",
-            "ar": "قائمة أدوية مركزك، من كتالوج TrustyDr، مع المفضلة ومجموعات الوصفات القابلة لإعادة الاستخدام. أسماء الأدوية موحّدة ولا تُترجم.",
-            "ku": "لیستی دەرمانی ناوەندەکەت، لە کەتەلۆگی TrustyDr، لەگەڵ دڵخوازەکان و کۆمەڵە نوسخە دووبارە بەکاردێنراوەکان. ناوی دەرمان ستانداردە و وەرناگێڕدرێت."
-          }
-        },
-        {
-          "id": "insights",
-          "image": "doctor-04-insights.png",
-          "title": {
-            "en": "Practice insights",
-            "ar": "مؤشرات الأداء",
-            "ku": "پێوەرەکانی کارایی"
-          },
-          "text": {
-            "en": "Appointments, completed visits, no-shows, cancellations and revenue — for the day, the week or the month.",
-            "ar": "المواعيد والزيارات المنجزة وحالات عدم الحضور والإلغاءات والإيرادات — لليوم أو الأسبوع أو الشهر.",
-            "ku": "کاتەکانی ژووان، سەردانە تەواوبووەکان، نەهاتووەکان، هەڵوەشاوەکان و داهات — بۆ ڕۆژ، هەفتە یان مانگ."
+            "en": "Your centre’s own list of medications, drawn from the TrustyDr catalogue, with favourites and reusable prescription sets beside it.",
+            "ar": "قائمة أدوية مركزك، من كتالوج TrustyDr، مع المفضلة ومجموعات الوصفات القابلة لإعادة الاستخدام.",
+            "ku": "لیستی دەرمانی ناوەندەکەت، لە کەتەلۆگی TrustyDr، لەگەڵ دڵخوازەکان و کۆمەڵە نوسخە دووبارە بەکاردێنراوەکان."
           }
         },
         {
           "id": "qr",
-          "image": "doctor-06-qr.png",
+          "image": "doctor-07-qr.png",
           "title": {
             "en": "Your patient QR code",
             "ar": "رمز QR الخاص بك",
             "ku": "کۆدی QR ـی تۆ"
           },
           "text": {
-            "en": "A QR code for your public profile. Put it on the reception desk and patients can view your profile and book an appointment.",
+            "en": "A QR code for your public profile. Put it on the reception desk and patients can view your profile and book.",
             "ar": "رمز QR لملفك العام. ضعه في الاستقبال ليتمكن المرضى من عرض ملفك وحجز المواعيد.",
             "ku": "کۆدی QR بۆ پرۆفایلی گشتیت. لە پێشوازی دایبنێ تا نەخۆش بتوانێت پرۆفایلەکەت ببینێت و کاتی ژووان بگرێت."
           }
@@ -192,107 +192,107 @@
         "ku": "پلاتفۆرمی دەرمانخانە"
       },
       "tagline": {
-        "en": "Prescriptions arrive digitally and move through a clear queue.",
-        "ar": "تصل الوصفات رقمياً وتتحرك عبر طابور واضح.",
-        "ku": "نوسخەکان بە دیجیتاڵی دێن و بە ڕیزێکی ڕوون دەڕۆن."
+        "en": "Prescriptions arrive digitally and are fulfilled with or without Store inventory.",
+        "ar": "تصل الوصفات رقمياً وتُصرف مع مخزون المتجر أو بدونه.",
+        "ku": "نوسخەکان بە دیجیتاڵی دێن و بە کۆگای فرۆشگا یان بەبێی دابەش دەکرێن."
       },
       "steps": [
         {
-          "id": "dashboard",
-          "image": null,
+          "id": "home",
+          "image": "pharmacy-01-dashboard.png",
           "title": {
-            "en": "Pharmacy dashboard",
-            "ar": "لوحة الصيدلية",
-            "ku": "داشبۆردی دەرمانخانە"
+            "en": "Your pharmacy home",
+            "ar": "الصفحة الرئيسية لصيدليتك",
+            "ku": "پەڕەی سەرەکی دەرمانخانەکەت"
           },
           "text": {
-            "en": "What needs attention today across prescriptions, orders and your store.",
-            "ar": "ما يحتاج انتباهك اليوم من وصفات وطلبات ومتجرك.",
-            "ku": "ئەوەی ئەمڕۆ پێویستی بە سەرنجە لە نوسخە و داواکاری و فرۆشگاکەت."
+            "en": "Verification and subscription status at the top, with opening hours, your QR code and your facility a tap away.",
+            "ar": "حالة التوثيق والاشتراك في الأعلى، مع ساعات العمل ورمز QR ومرفقك على بُعد نقرة واحدة.",
+            "ku": "دۆخی پشتڕاستکردنەوە و بەشداری لە سەرەوە، لەگەڵ کاتەکانی کارکردن و کۆدی QR و دەزگاکەت بە یەک کرتە."
+          }
+        },
+        {
+          "id": "hours",
+          "image": "pharmacy-02-hours.png",
+          "title": {
+            "en": "Opening hours",
+            "ar": "ساعات العمل",
+            "ku": "کاتەکانی کارکردن"
+          },
+          "text": {
+            "en": "Set opening and closing times for each day, and close the days you do not trade. Patients see when you are open.",
+            "ar": "حدّد أوقات الفتح والإغلاق لكل يوم، وأغلق الأيام التي لا تعمل فيها. يرى المرضى متى تكون مفتوحاً.",
+            "ku": "کاتی کردنەوە و داخستن بۆ هەر ڕۆژێک دیاری بکە، و ئەو ڕۆژانە دابخە کە کار ناکەیت. نەخۆشەکان دەزانن کەی کراوەیت."
           }
         },
         {
           "id": "incoming",
-          "image": null,
+          "image": "pharmacy-03-incoming.png",
           "title": {
-            "en": "Incoming prescriptions",
-            "ar": "الوصفات الواردة",
-            "ku": "نوسخە هاتووەکان"
+            "en": "Prescriptions arrive",
+            "ar": "وصول الوصفات",
+            "ku": "گەیشتنی نوسخەکان"
           },
           "text": {
-            "en": "Prescriptions sent by doctors arrive here directly — nothing is carried in by hand.",
-            "ar": "تصل الوصفات المرسلة من الأطباء هنا مباشرة — دون نقل ورقي.",
-            "ku": "ئەو نوسخانەی پزیشکان دەینێرن ڕاستەوخۆ لێرە دێن — هیچ بە دەست ناهێنرێت."
+            "en": "A prescription sent by a doctor lands in your reception board with the patient, the prescriber and the medication. Confirm receipt to take it on.",
+            "ar": "الوصفة التي يرسلها الطبيب تصل إلى لوحة الاستقبال مع المريض والطبيب المُصدِر والدواء. أكّد الاستلام لتبدأ العمل عليها.",
+            "ku": "ئەو نوسخەیەی پزیشک دەینێرێت دەگاتە تەختەی وەرگرتنت لەگەڵ نەخۆش و پزیشکی نوسەر و دەرمانەکە. وەرگرتن پشتڕاست بکەرەوە بۆ دەستپێکردن."
+          }
+        },
+        {
+          "id": "preparation",
+          "image": "pharmacy-04-preparation.png",
+          "title": {
+            "en": "Preparation board",
+            "ar": "لوحة التجهيز",
+            "ku": "تەختەی ئامادەکردن"
+          },
+          "text": {
+            "en": "Received, in preparation, and ready — every prescription your team is working on, in one place.",
+            "ar": "تم الاستلام، قيد التحضير، وجاهزة — كل وصفة يعمل عليها فريقك في مكان واحد.",
+            "ku": "وەرگیراو، لە ئامادەکردندا، و ئامادە — هەموو ئەو نوسخانەی تیمەکەت کاریان لەسەر دەکات لە یەک شوێندا."
           }
         },
         {
           "id": "dispensing",
-          "image": null,
+          "image": "pharmacy-05-dispensing.png",
           "title": {
-            "en": "Prepare and dispense",
-            "ar": "التجهيز والصرف",
-            "ku": "ئامادەکردن و دابەشکردن"
+            "en": "Dispensing, with or without Store inventory",
+            "ar": "الصرف، مع مخزون المتجر أو بدونه",
+            "ku": "دابەشکردن، بە کۆگای فرۆشگا یان بەبێی"
           },
           "text": {
-            "en": "Work an order through received, preparing, ready and dispensed — the patient is notified at each step.",
-            "ar": "انقل الطلب عبر: مستلم، قيد التجهيز، جاهز، وتم الصرف — ويُشعر المريض في كل خطوة.",
-            "ku": "داواکارییەکە ببە بە وەرگیراو، ئامادەکردن، ئامادە و دابەشکراودا — نەخۆش لە هەر هەنگاوێک ئاگادار دەکرێتەوە."
+            "en": "Dispense against TrustyDr Store inventory when you use it, or record what you handed over manually. A pharmacy with no Store inventory works exactly the same.",
+            "ar": "اصرف من مخزون متجر TrustyDr إذا كنت تستخدمه، أو سجّل ما صرفته يدوياً. الصيدلية التي لا تملك مخزون متجر تعمل بالطريقة نفسها تماماً.",
+            "ku": "لە کۆگای فرۆشگای TrustyDr دابەش بکە ئەگەر بەکاری دەهێنیت، یان ئەوەی داوتە بە دەستی تۆمار بکە. ئەو دەرمانخانەیەی کۆگای فرۆشگای نییە بە هەمان شێوە کار دەکات."
           }
         },
         {
-          "id": "services",
-          "image": null,
+          "id": "ready",
+          "image": "pharmacy-06-ready.png",
           "title": {
-            "en": "Services",
-            "ar": "الخدمات",
-            "ku": "خزمەتگوزارییەکان"
+            "en": "Collect and hand over",
+            "ar": "التحصيل والتسليم",
+            "ku": "وەرگرتنی پارە و پێدان"
           },
           "text": {
-            "en": "Publish what your pharmacy offers so doctors and patients can find you.",
-            "ar": "انشر ما تقدّمه صيدليتك ليتمكن الأطباء والمرضى من الوصول إليك.",
-            "ku": "ئەوەی دەرمانخانەکەت پێشکەشی دەکات بڵاو بکەرەوە تا پزیشک و نەخۆش بتدۆزنەوە."
+            "en": "Ready prescriptions show what is owed. Take payment and dispense in one step, or dispense straight away if it is already paid.",
+            "ar": "الوصفات الجاهزة تُظهر المبلغ المستحق. حصّل الدفع واصرف في خطوة واحدة، أو اصرف مباشرة إذا كانت مدفوعة.",
+            "ku": "نوسخە ئامادەکان بڕی پارەی ماوە پیشان دەدەن. لە یەک هەنگاودا پارە وەربگرە و دابەش بکە، یان ڕاستەوخۆ دابەش بکە ئەگەر پارەکەی دراوە."
           }
         },
         {
-          "id": "store",
-          "image": null,
+          "id": "printable",
+          "image": "pharmacy-07-printable.png",
           "title": {
-            "en": "Store and products",
-            "ar": "المتجر والمنتجات",
-            "ku": "فرۆشگا و بەرهەمەکان"
+            "en": "A verifiable prescription",
+            "ar": "وصفة قابلة للتحقق",
+            "ku": "نوسخەیەکی پشتڕاستکراوە"
           },
           "text": {
-            "en": "Manage your product catalogue and keep your online store current.",
-            "ar": "أدر كتالوج منتجاتك وحافظ على تحديث متجرك الإلكتروني.",
-            "ku": "کەتەلۆگی بەرهەمەکانت بەڕێوە ببە و فرۆشگا ئۆنلاینەکەت نوێ ڕابگرە."
-          }
-        },
-        {
-          "id": "orders",
-          "image": null,
-          "title": {
-            "en": "Orders and picking",
-            "ar": "الطلبات والتجهيز",
-            "ku": "داواکاری و کۆکردنەوە"
-          },
-          "text": {
-            "en": "Pick, pack and fulfil customer orders from one working screen.",
-            "ar": "جهّز الطلبات وغلّفها ونفّذها من شاشة عمل واحدة.",
-            "ku": "داواکاری کڕیاران لە یەک شاشەدا کۆبکەرەوە و پێچە و جێبەجێ بکە."
-          }
-        },
-        {
-          "id": "billing",
-          "image": null,
-          "title": {
-            "en": "Subscription and billing",
-            "ar": "الاشتراك والفوترة",
-            "ku": "بەشداری و پارەدان"
-          },
-          "text": {
-            "en": "Your plan, renewal date and payment history in one place.",
-            "ar": "خطتك وتاريخ التجديد وسجل المدفوعات في مكان واحد.",
-            "ku": "پلانەکەت، بەرواری نوێکردنەوە و مێژووی پارەدان لە یەک شوێندا."
+            "en": "Every prescription prints with its reference and a QR code that confirms it against the record TrustyDr issued.",
+            "ar": "تُطبع كل وصفة برقم مرجعها ورمز QR يؤكد مطابقتها للسجل الصادر عن TrustyDr.",
+            "ku": "هەر نوسخەیەک بە ژمارەی ئاماژە و کۆدی QR چاپ دەکرێت کە بەرامبەر بە تۆمارە دەرکراوەکەی TrustyDr پشتڕاستی دەکاتەوە."
           }
         }
       ]
